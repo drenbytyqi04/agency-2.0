@@ -150,11 +150,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </div>
       </section>
 
+      {project.metrics && project.metrics.length > 0 && (
       <section className="border-y border-line bg-surface py-16">
         <div className="shell">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <Eyebrow>In numbers</Eyebrow>
-            <PlaceholderNote>Illustrative figures — not measured client results</PlaceholderNote>
+            {project.isPlaceholder && (
+              <PlaceholderNote>Illustrative figures — not measured client results</PlaceholderNote>
+            )}
           </div>
 
           <dl className="mt-10 grid gap-px bg-line sm:grid-cols-3">
@@ -171,6 +174,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           </dl>
         </div>
       </section>
+      )}
 
       {project.gallery.length > 0 && (
         <section className="shell py-section">

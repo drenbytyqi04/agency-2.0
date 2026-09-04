@@ -22,7 +22,7 @@ export function FeaturedWork() {
         </div>
 
         <div className="mt-6">
-          <PlaceholderNote>Demonstration projects — not work delivered for clients</PlaceholderNote>
+          <PlaceholderNote>Cards marked “demo” are demonstration content, not delivered work</PlaceholderNote>
         </div>
 
         {/* Asymmetric grid: a wide lead, an offset column, then a staggered pair. */}

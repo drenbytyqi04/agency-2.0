@@ -16,6 +16,8 @@ export interface ProjectView {
   description: string
   src: string
   alt: string
+  /** Demonstration content rather than delivered work. Marked on the card itself. */
+  isPlaceholder: boolean
 }
 
 export function toProjectView(project: Project): ProjectView {
@@ -25,6 +27,7 @@ export function toProjectView(project: Project): ProjectView {
     category: project.category,
     year: project.year,
     description: project.description,
+    isPlaceholder: project.isPlaceholder,
     src: resolveImage(project.image),
     alt: altFor(project.image, project.title),
   }

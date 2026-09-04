@@ -37,6 +37,12 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
             aria-hidden="true"
             className="absolute inset-0 bg-base/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
+          {project.isPlaceholder && (
+            <span className="absolute left-5 top-5 rounded-full border border-line-strong bg-base/70 px-3 py-1 font-sans text-[10px] uppercase tracking-[0.14em] text-muted backdrop-blur-sm">
+              Demo
+            </span>
+          )}
+
           {/* Hover marker, hidden from assistive tech — the link already announces the action. */}
           <span
             aria-hidden="true"
