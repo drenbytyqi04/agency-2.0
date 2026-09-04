@@ -248,5 +248,21 @@ export const imageSources: ImageSource[] = [
   },
 ]
 
+/**
+ * Builds the delivery URL for a photo, using Unsplash's documented resizing parameters.
+ *
+ * Width and quality are optional on purpose: when next/image consumes this it appends its
+ * own `w` and `q` per breakpoint, so setting them here would duplicate the parameters and
+ * make the served size harder to reason about. The download script passes them explicitly.
+ */
+export function remoteImageUrl(source: ImageSource, width?: number, quality?: number): string {
+  const url = new URL(source.baseUrl)
+  url.searchParams.set('fm', 'jpg')
+  url.searchParams.set('fit', 'max')
+  if (width) url.searchParams.set('w', String(width))
+  if (quality) url.searchParams.set('q', String(quality))
+  return url.toString()
+}
+
 /** Lookup by public path, used for alt text and photo credits. */
 export const imageSourceByFile = new Map(imageSources.map((source) => [source.file, source]))

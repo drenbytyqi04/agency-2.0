@@ -6,8 +6,10 @@ import { notFound } from 'next/navigation'
 import { MaskText } from '@/components/animations/mask-text'
 import { Reveal } from '@/components/animations/reveal'
 import { ButtonLink } from '@/components/ui/button'
+import { PhotoCredits } from '@/components/ui/photo-credits'
 import { Eyebrow, PlaceholderNote } from '@/components/ui/section'
 import { getNextProject, getProject, projects } from '@/content/projects'
+import { isPlaceholderSrc } from '@/lib/image-src'
 import { altFor, creditFor, resolveImage } from '@/lib/images'
 import { ctas, siteConfig } from '@/lib/site'
 
@@ -107,6 +109,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           fill
           priority
           sizes="100vw"
+          unoptimized={isPlaceholderSrc(heroSrc)}
           className="object-cover"
         />
       </figure>
@@ -165,7 +168,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <section className="shell py-section">
           <h2 className="sr-only">Project gallery</h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {project.gallery.map((image, index) => (
+            {project.gallery.map((image, index) => {
+              const src = resolveImage(image)
+              return (
               <Reveal
                 key={image}
                 delay={index * 0.05}
@@ -177,22 +182,29 @@ export default async function CaseStudyPage({ params }: PageProps) {
                   }`}
                 >
                   <Image
-                    src={resolveImage(image)}
+                    src={src}
                     alt={altFor(image, `${project.title} — view ${index + 1}`)}
                     fill
                     loading="lazy"
                     sizes={index % 3 === 0 ? '(max-width: 768px) 100vw, 90vw' : '(max-width: 768px) 100vw, 45vw'}
+                    unoptimized={isPlaceholderSrc(src)}
                     className="object-cover"
                   />
                 </div>
               </Reveal>
-            ))}
+              )
+            })}
           </div>
         </section>
       )}
 
       <section className="border-t border-line py-section">
         <div className="shell">
+          <PhotoCredits
+            files={[project.image, ...project.gallery]}
+            className="mb-14 border-b border-line pb-6"
+          />
+
           <div className="flex flex-wrap items-end justify-between gap-8">
             <div>
               <Eyebrow>Next project</Eyebrow>

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { MaskText } from '@/components/animations/mask-text'
 import { FinalCta } from '@/components/sections/final-cta'
 import { WorkGrid } from '@/components/sections/work-grid'
+import { PhotoCredits } from '@/components/ui/photo-credits'
 import { Eyebrow, PlaceholderNote } from '@/components/ui/section'
 import { projects } from '@/content/projects'
 import { toProjectView } from '@/lib/project-view'
@@ -39,6 +40,11 @@ export default function WorkPage() {
       </header>
 
       <WorkGrid projects={projects.map(toProjectView)} />
+
+      <div className="shell pb-16">
+        <PhotoCredits files={projects.map((project) => project.image)} />
+      </div>
+
       <FinalCta />
     </>
   )

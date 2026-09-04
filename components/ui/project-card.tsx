@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { isPlaceholderSrc } from '@/lib/image-src'
 import type { ProjectView } from '@/lib/project-view'
 
 interface ProjectCardProps {
@@ -29,6 +30,7 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
             fill
             sizes={size === 'lg' ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 40vw'}
             priority={priority}
+            unoptimized={isPlaceholderSrc(project.src)}
             className="object-cover transition-transform duration-[900ms] ease-editorial will-change-transform group-hover:scale-[1.04]"
           />
           <div

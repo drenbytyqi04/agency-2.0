@@ -106,7 +106,11 @@ async function main(): Promise<void> {
     const name = source.file.split('/').pop()!.replace(/\.[a-z]+$/i, '')
     await writeFile(join(OUT_DIR, `${name}.svg`), svgFor(name), 'utf8')
   }
-  console.log(`Generated ${imageSources.length} placeholders in public/images/placeholders/`)
+  // Generic fallback for any image path that has no manifest entry, so the last tier of
+  // lib/images.ts always resolves to a file that exists.
+  await writeFile(join(OUT_DIR, 'fallback.svg'), svgFor('fallback'), 'utf8')
+
+  console.log(`Generated ${imageSources.length + 1} placeholders in public/images/placeholders/`)
 }
 
 void main()

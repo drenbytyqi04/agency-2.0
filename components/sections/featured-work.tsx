@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { MaskText } from '@/components/animations/mask-text'
 import { Reveal } from '@/components/animations/reveal'
 import { ProjectCard } from '@/components/ui/project-card'
+import { PhotoCredits } from '@/components/ui/photo-credits'
 import { PlaceholderNote, Section } from '@/components/ui/section'
 import { featuredProjects } from '@/content/projects'
 import { toProjectView } from '@/lib/project-view'
@@ -50,6 +51,11 @@ export function FeaturedWork() {
             </Reveal>
           )}
         </div>
+
+        <PhotoCredits
+          files={featuredProjects.map((project) => project.image)}
+          className="mt-14 border-t border-line pt-6"
+        />
       </div>
     </Section>
   )

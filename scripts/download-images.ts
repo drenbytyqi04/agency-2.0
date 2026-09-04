@@ -17,7 +17,7 @@ import { dirname, join } from 'node:path'
 import { Readable } from 'node:stream'
 import { pipeline } from 'node:stream/promises'
 
-import { imageSources } from '../content/image-sources'
+import { imageSources, remoteImageUrl } from '../content/image-sources'
 
 const PUBLIC_DIR = join(process.cwd(), 'public')
 /** Long edge in px. Large enough for a full-bleed hero on a 1920px display, small enough to stay fast. */
@@ -25,16 +25,6 @@ const TARGET_WIDTH = 2000
 const QUALITY = 72
 const force = process.argv.includes('--force')
 const accessKey = process.env.UNSPLASH_ACCESS_KEY
-
-/** Unsplash's documented dynamic-resizing parameters. */
-function buildUrl(baseUrl: string): string {
-  const url = new URL(baseUrl)
-  url.searchParams.set('fm', 'jpg')
-  url.searchParams.set('fit', 'max')
-  url.searchParams.set('w', String(TARGET_WIDTH))
-  url.searchParams.set('q', String(QUALITY))
-  return url.toString()
-}
 
 async function exists(path: string): Promise<boolean> {
   try {
@@ -89,7 +79,7 @@ async function main(): Promise<void> {
     }
 
     try {
-      await download(buildUrl(source.baseUrl), destination)
+      await download(remoteImageUrl(source, TARGET_WIDTH, QUALITY), destination)
       await trackDownload(source.downloadLocation)
       downloaded += 1
       console.log(`  ✓ ${source.file}  · ${source.photographer}`)

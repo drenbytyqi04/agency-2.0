@@ -34,10 +34,25 @@ npm run dev          # http://localhost:3000
 `content/image-sources.ts` is the single source of truth: one entry per photo, each with a
 real Unsplash id, photographer, source URL and written alt text. Nothing is invented.
 
-**The photographs are not in the repository yet** — they have to be downloaded once:
+**Photos work out of the box — there is nothing to download.** `lib/images.ts` resolves each
+manifest path through three tiers:
+
+1. **A local copy** under `public/images/projects/`, if one exists. Self-hosted and fastest,
+   so it always wins.
+2. **The Unsplash CDN**, using the URL from the manifest. This is the default, and why a
+   fresh clone shows real photography with nothing committed. `next/image` still resizes and
+   optimises it; `images.unsplash.com` is allowed in `next.config.ts`.
+3. **A generated SVG placeholder**, for any path with no manifest entry.
+
+Photographers are credited wherever their work appears, via `components/ui/photo-credits.tsx`.
+
+### Self-hosting the photos (optional)
+
+To stop depending on a third-party CDN, download them once and commit the result:
 
 ```bash
-npm run images
+npm run images            # into public/images/projects/
+npm run images -- --force # re-download everything
 ```
 
 ```bash

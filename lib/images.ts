@@ -1,27 +1,39 @@
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
 
-import { imageSourceByFile } from '@/content/image-sources'
+import { imageSourceByFile, remoteImageUrl } from '@/content/image-sources'
+import { PLACEHOLDER_PREFIX } from '@/lib/image-src'
 
 /**
- * Resolves an image path declared in the manifest to something that actually exists on disk.
+ * Resolves a manifest image path to something that will actually render.
  *
- * Photographs are downloaded by `npm run images` and are intentionally not committed. Until
- * they are present — a fresh clone, or an environment without network access to the photo CDN —
- * this returns an on-brand placeholder so pages render correctly and the build never fails.
+ * Three tiers, in order:
+ *  1. A local copy under public/ — downloaded by `npm run images`. Self-hosted and fastest,
+ *     so it always wins when present.
+ *  2. The photo's Unsplash CDN URL from the manifest. This is why the site shows real
+ *     photography on a fresh clone with nothing downloaded and nothing committed.
+ *  3. An on-brand placeholder, for any path with no manifest entry.
  *
- * Server-only: called during rendering of Server Components, so it resolves at build time
- * for statically generated pages.
+ * Server-only: `existsSync` means this resolves at build time for static pages.
  */
 export function resolveImage(file: string): string {
   if (existsSync(join(process.cwd(), 'public', file))) return file
+
+  const source = imageSourceByFile.get(file)
+  if (source) return remoteImageUrl(source)
+
   return placeholderFor(file)
 }
 
-/** Deterministic placeholder path for a manifest entry, e.g. /images/placeholders/nova-stays-01.svg */
+/**
+ * Deterministic placeholder path, e.g. /images/placeholders/nova-stays-01.svg, falling back
+ * to the generic file for any path the generator never produced one for.
+ */
 function placeholderFor(file: string): string {
   const name = file.split('/').pop()?.replace(/\.[a-z]+$/i, '') ?? 'fallback'
-  return `/images/placeholders/${name}.svg`
+  const named = `${PLACEHOLDER_PREFIX}${name}.svg`
+  if (existsSync(join(process.cwd(), 'public', named))) return named
+  return `${PLACEHOLDER_PREFIX}fallback.svg`
 }
 
 /** Alt text from the manifest, with a safe fallback. */
@@ -29,10 +41,22 @@ export function altFor(file: string, fallback: string): string {
   return imageSourceByFile.get(file)?.alt ?? fallback
 }
 
-/** Photo credit, or null when the file is currently a placeholder. */
+/**
+ * Photo credit for an image. Returned whenever the photo is a real photograph — served
+ * locally or from the CDN — since Unsplash asks for attribution either way.
+ */
 export function creditFor(file: string): { photographer: string; url: string } | null {
   const source = imageSourceByFile.get(file)
   if (!source) return null
-  if (!existsSync(join(process.cwd(), 'public', file))) return null
   return { photographer: source.photographer, url: source.photographerUrl }
+}
+
+/** Credits for a set of images, de-duplicated by photographer. */
+export function creditsFor(files: string[]): Array<{ photographer: string; url: string }> {
+  const seen = new Map<string, { photographer: string; url: string }>()
+  for (const file of files) {
+    const credit = creditFor(file)
+    if (credit) seen.set(credit.photographer, credit)
+  }
+  return [...seen.values()]
 }
