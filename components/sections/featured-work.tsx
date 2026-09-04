@@ -1,0 +1,56 @@
+import Link from 'next/link'
+
+import { MaskText } from '@/components/animations/mask-text'
+import { Reveal } from '@/components/animations/reveal'
+import { ProjectCard } from '@/components/ui/project-card'
+import { PlaceholderNote, Section } from '@/components/ui/section'
+import { featuredProjects } from '@/content/projects'
+import { toProjectView } from '@/lib/project-view'
+
+export function FeaturedWork() {
+  const [first, second, third, fourth] = featuredProjects.map(toProjectView)
+
+  return (
+    <Section id="pune">
+      <div className="shell">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <MaskText className="text-display-md text-ink" lines={['Punë që flasin.']} />
+          <Link
+            href="/pune"
+            className="link-underline mb-2 font-sans text-[13px] uppercase tracking-[0.16em] text-ink transition-colors hover:text-accent"
+          >
+            Të gjitha punët
+          </Link>
+        </div>
+
+        <div className="mt-6">
+          <PlaceholderNote>Projekte demonstruese — jo punë e realizuar për klientë</PlaceholderNote>
+        </div>
+
+        {/* Asymmetric grid: a wide lead, an offset column, then a staggered pair. */}
+        <div className="mt-14 grid gap-x-8 gap-y-16 lg:grid-cols-12">
+          {first && (
+            <Reveal className="lg:col-span-7">
+              <ProjectCard project={first} size="lg" priority />
+            </Reveal>
+          )}
+          {second && (
+            <Reveal delay={0.08} className="lg:col-span-5 lg:pt-28">
+              <ProjectCard project={second} />
+            </Reveal>
+          )}
+          {third && (
+            <Reveal className="lg:col-span-5 lg:col-start-2">
+              <ProjectCard project={third} />
+            </Reveal>
+          )}
+          {fourth && (
+            <Reveal delay={0.08} className="lg:col-span-6 lg:col-start-7 lg:pt-20">
+              <ProjectCard project={fourth} size="lg" />
+            </Reveal>
+          )}
+        </div>
+      </div>
+    </Section>
+  )
+}
