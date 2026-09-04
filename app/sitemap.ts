@@ -6,7 +6,7 @@ import { siteConfig } from '@/lib/site'
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
-  const staticRoutes = ['', '/sherbimet', '/pune', '/rreth-nesh', '/kontakt'].map((route) => ({
+  const staticRoutes = ['', '/services', '/work', '/about', '/contact'].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified,
     changeFrequency: 'monthly' as const,
@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const projectRoutes = projects.map((project) => ({
-    url: `${siteConfig.url}/pune/${project.slug}`,
+    url: `${siteConfig.url}/work/${project.slug}`,
     lastModified,
     changeFrequency: 'yearly' as const,
     priority: 0.6,

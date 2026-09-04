@@ -10,14 +10,14 @@ import { services } from '@/content/services'
 import { siteConfig } from '@/lib/site'
 
 const description =
-  'Ueb-faqe, dyqane online, sisteme rezervimesh, brand, UI/UX, SEO dhe mirëmbajtje — çfarë përfshihet dhe sa kushton.'
+  'Websites, online stores, booking systems, branding, UI/UX, SEO and maintenance — what is included and what it costs.'
 
 export const metadata: Metadata = {
-  title: 'Shërbimet',
+  title: 'Services',
   description,
-  alternates: { canonical: '/sherbimet' },
-  openGraph: { title: 'Shërbimet — Nexa', description, url: `${siteConfig.url}/sherbimet` },
-  twitter: { title: 'Shërbimet — Nexa', description },
+  alternates: { canonical: '/services' },
+  openGraph: { title: 'Services — Nexa', description, url: `${siteConfig.url}/services` },
+  twitter: { title: 'Services — Nexa', description },
 }
 
 export default function ServicesPage() {
@@ -25,15 +25,15 @@ export default function ServicesPage() {
     <>
       <header className="border-b border-line pb-16 pt-[calc(var(--header-height)+5rem)]">
         <div className="shell">
-          <Eyebrow>Shërbimet</Eyebrow>
+          <Eyebrow>Services</Eyebrow>
           <MaskText
             as="h1"
             className="mt-8 text-display-lg text-ink"
-            lines={['Çfarë mund', 'të ndërtojmë', 'për ju.']}
+            lines={['What we can', 'build', 'for you.']}
           />
           <p className="mt-10 max-w-xl font-sans text-base text-muted lg:ml-auto">
-            Çdo shërbim ka një qëllim të matshëm. Më poshtë është çfarë përfshihet, për kë është dhe
-            sa kushton — pa fjalë të tepërta.
+            Every service has a measurable purpose. Below is what is included, who it is for and
+            what it costs — without the filler.
           </p>
         </div>
       </header>
@@ -56,13 +56,13 @@ export default function ServicesPage() {
               </h2>
               <dl className="mt-8 space-y-5">
                 <div>
-                  <dt className="eyebrow">Çmimi orientues</dt>
+                  <dt className="eyebrow">Indicative price</dt>
                   <dd className="mt-1 font-sans text-base text-ink [font-variant-numeric:tabular-nums]">
                     {service.priceRange}
                   </dd>
                 </div>
                 <div>
-                  <dt className="eyebrow">Për kë është</dt>
+                  <dt className="eyebrow">Who it is for</dt>
                   <dd className="mt-1 font-sans text-sm text-muted">{service.idealFor}</dd>
                 </div>
               </dl>
@@ -78,7 +78,7 @@ export default function ServicesPage() {
                 {service.summary}
               </p>
 
-              <h3 className="eyebrow mt-10">Çfarë përfshihet</h3>
+              <h3 className="eyebrow mt-10">What is included</h3>
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                 {service.deliverables.map((item) => (
                   <li key={item} className="flex items-baseline gap-3 font-sans text-sm text-muted">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
 
               {service.faq.length > 0 && (
                 <div className="mt-12">
-                  <h3 className="eyebrow mb-2">Pyetje të shpeshta</h3>
+                  <h3 className="eyebrow mb-2">Frequently asked</h3>
                   <Accordion items={service.faq} />
                 </div>
               )}

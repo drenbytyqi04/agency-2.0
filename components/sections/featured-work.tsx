@@ -11,20 +11,20 @@ export function FeaturedWork() {
   const [first, second, third, fourth] = featuredProjects.map(toProjectView)
 
   return (
-    <Section id="pune">
+    <Section id="work">
       <div className="shell">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <MaskText className="text-display-md text-ink" lines={['Punë që flasin.']} />
+          <MaskText className="text-display-md text-ink" lines={['Work that speaks.']} />
           <Link
-            href="/pune"
+            href="/work"
             className="link-underline mb-2 font-sans text-[13px] uppercase tracking-[0.16em] text-ink transition-colors hover:text-accent"
           >
-            Të gjitha punët
+            All work
           </Link>
         </div>
 
         <div className="mt-6">
-          <PlaceholderNote>Projekte demonstruese — jo punë e realizuar për klientë</PlaceholderNote>
+          <PlaceholderNote>Demonstration projects — not work delivered for clients</PlaceholderNote>
         </div>
 
         {/* Asymmetric grid: a wide lead, an offset column, then a staggered pair. */}

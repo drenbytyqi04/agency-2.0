@@ -11,22 +11,22 @@ export const clientsArePlaceholder = true
 export const processSteps = [
   {
     index: '01',
-    title: 'Zbulimi',
-    description: 'E kuptojmë biznesin, objektivat dhe çfarë duhet të arrijë website-i.',
+    title: 'Discovery',
+    description: 'We learn the business, the goals, and what the website actually has to achieve.',
   },
   {
     index: '02',
-    title: 'Dizajni',
-    description: 'Krijojmë drejtimin vizual dhe përvojën që e bën markën të dallojë.',
+    title: 'Design',
+    description: 'We set the visual direction and the experience that makes the brand stand apart.',
   },
   {
     index: '03',
-    title: 'Zhvillimi',
-    description: 'E ndërtojmë website-in me kod të pastër, të shpejtë dhe të mirëstrukturuar.',
+    title: 'Development',
+    description: 'We build it with clean, fast, well-structured code.',
   },
   {
     index: '04',
-    title: 'Lansimi & rritja',
-    description: 'E publikojmë, e testojmë dhe vazhdojmë ta përmirësojmë.',
+    title: 'Launch & growth',
+    description: 'We ship it, test it, and keep improving it.',
   },
 ] as const

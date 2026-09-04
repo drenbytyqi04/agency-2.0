@@ -7,9 +7,9 @@ import { siteConfig } from '@/lib/site'
 
 export function Pricing() {
   return (
-    <Section id="cmimet">
+    <Section id="pricing">
       <div className="shell">
-        <MaskText className="max-w-4xl text-display-md text-ink" lines={['Zgjidh si duam', 'të punojmë.']} />
+        <MaskText className="max-w-4xl text-display-md text-ink" lines={['Choose how', 'we work together.']} />
 
         <StaggerGroup className="mt-16 grid gap-px bg-line lg:grid-cols-3">
           {pricingTiers.map((tier) => (
@@ -25,7 +25,7 @@ export function Pricing() {
                   </h3>
                   {tier.highlighted && (
                     <span className="border border-accent px-2.5 py-1 font-sans text-[10px] uppercase tracking-[0.16em] text-accent">
-                      Më i zgjedhuri
+                      Most chosen
                     </span>
                   )}
                 </div>

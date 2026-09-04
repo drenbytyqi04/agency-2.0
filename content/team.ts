@@ -21,26 +21,26 @@ export const teamIsPlaceholder = true
 export const team: TeamMember[] = [
   {
     id: 'placeholder-strategy',
-    initials: 'ND',
-    name: 'Emër demonstrues',
-    role: 'Strategji & UX',
-    focus: 'Struktura e përmbajtjes, rrjedhat e përdoruesit dhe ajo që faqja duhet të arrijë.',
+    initials: 'ST',
+    name: 'Placeholder name',
+    role: 'Strategy & UX',
+    focus: 'Content structure, user flows, and what the site has to achieve.',
     isPlaceholder: true,
   },
   {
     id: 'placeholder-design',
     initials: 'AD',
-    name: 'Emër demonstrues',
+    name: 'Placeholder name',
     role: 'Art direction',
-    focus: 'Drejtimi vizual, tipografia dhe mënyra si marka duket në çdo pikë kontakti.',
+    focus: 'Visual direction, typography, and how the brand looks at every touchpoint.',
     isPlaceholder: true,
   },
   {
     id: 'placeholder-engineering',
-    initials: 'ZH',
-    name: 'Emër demonstrues',
-    role: 'Zhvillim',
-    focus: 'Kod i pastër, shpejtësi, aksesueshmëri dhe sisteme që mbahen lehtë.',
+    initials: 'EN',
+    name: 'Placeholder name',
+    role: 'Engineering',
+    focus: 'Clean code, speed, accessibility, and systems that stay easy to maintain.',
     isPlaceholder: true,
   },
 ]
@@ -51,8 +51,8 @@ export interface Value {
 }
 
 export const values: Value[] = [
-  { title: 'Qartësi', description: 'Çdo projekt fillon me një qëllim të qartë.' },
-  { title: 'Kujdes', description: 'Detajet bëjnë diferencën.' },
-  { title: 'Shpejtësi', description: 'Punojmë shpejt pa sakrifikuar cilësinë.' },
-  { title: 'Partneritet', description: 'Nuk duam të jemi vetëm furnizues. Duam të jemi partner.' },
+  { title: 'Clarity', description: 'Every project starts with a clear objective.' },
+  { title: 'Craft', description: 'The details are what make the difference.' },
+  { title: 'Speed', description: 'We work fast without trading away quality.' },
+  { title: 'Partnership', description: 'We do not want to be just a supplier. We want to be a partner.' },
 ]

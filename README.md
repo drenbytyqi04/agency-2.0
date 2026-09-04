@@ -1,8 +1,9 @@
 # Nexa
 
-Website for Nexa, a digital studio based in Prishtinë, Kosovë.
+Website for Nexa, a digital studio based in Prishtina, Kosovo.
 
-Interface copy is Albanian. Code, comments and documentation are English.
+The site is in English throughout — interface copy, routes (`/services`, `/work`, `/about`,
+`/contact`), metadata and `lang="en"`.
 
 ## Stack
 
@@ -31,7 +32,13 @@ npm run dev          # http://localhost:3000
 ## Imagery
 
 `content/image-sources.ts` is the single source of truth: one entry per photo, each with a
-real Unsplash id, photographer, source URL and Albanian alt text. Nothing is invented.
+real Unsplash id, photographer, source URL and written alt text. Nothing is invented.
+
+**The photographs are not in the repository yet** — they have to be downloaded once:
+
+```bash
+npm run images
+```
 
 ```bash
 npm run images            # download into public/images/projects/

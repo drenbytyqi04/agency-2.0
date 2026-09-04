@@ -9,14 +9,14 @@ import { toProjectView } from '@/lib/project-view'
 import { siteConfig } from '@/lib/site'
 
 const description =
-  'Projekte demonstruese që tregojnë si punojmë: ueb-faqe, dyqane online, branding dhe sisteme rezervimesh.'
+  'Demonstration projects showing how we work: websites, online stores, branding and booking systems.'
 
 export const metadata: Metadata = {
-  title: 'Punët',
+  title: 'Work',
   description,
-  alternates: { canonical: '/pune' },
-  openGraph: { title: 'Punët — Nexa', description, url: `${siteConfig.url}/pune` },
-  twitter: { title: 'Punët — Nexa', description },
+  alternates: { canonical: '/work' },
+  openGraph: { title: 'Work — Nexa', description, url: `${siteConfig.url}/work` },
+  twitter: { title: 'Work — Nexa', description },
 }
 
 export default function WorkPage() {
@@ -24,15 +24,15 @@ export default function WorkPage() {
     <>
       <header className="pb-14 pt-[calc(var(--header-height)+5rem)]">
         <div className="shell">
-          <Eyebrow>Punët</Eyebrow>
+          <Eyebrow>Work</Eyebrow>
           <MaskText
             as="h1"
             className="mt-8 text-display-lg text-ink"
-            lines={['Punë që bëjnë', 'diferencë.']}
+            lines={['Work that makes', 'a difference.']}
           />
           <div className="mt-10">
             <PlaceholderNote>
-              Projekte demonstruese — jo punë e realizuar për klientë realë
+              Demonstration projects — not work delivered for real clients
             </PlaceholderNote>
           </div>
         </div>

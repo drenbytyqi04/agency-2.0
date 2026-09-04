@@ -74,7 +74,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
               type="button"
               onClick={onClose}
               className="-mr-2 flex h-12 w-12 items-center justify-center text-ink"
-              aria-label="Mbyll menunë"
+              aria-label="Close menu"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" strokeWidth="1.5" />
@@ -82,7 +82,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             </button>
           </div>
 
-          <nav className="flex flex-1 flex-col justify-center px-gutter" aria-label="Navigimi kryesor">
+          <nav className="flex flex-1 flex-col justify-center px-gutter" aria-label="Main navigation">
             <ul>
               {navigation.map((item, index) => (
                 <li key={item.href} className="border-b border-line">
@@ -96,7 +96,11 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                       onClick={onClose}
                       className="flex items-baseline gap-4 py-5 font-display text-[13vw] uppercase leading-none text-ink transition-colors hover:text-accent"
                     >
-                      <span className="font-sans text-[11px] tracking-[0.2em] text-muted">
+                      {/* Decorative ordinal: hidden so the link announces as "Services", not "01 Services". */}
+                      <span
+                        aria-hidden="true"
+                        className="font-sans text-[11px] tracking-[0.2em] text-muted"
+                      >
                         0{index + 1}
                       </span>
                       {item.label}

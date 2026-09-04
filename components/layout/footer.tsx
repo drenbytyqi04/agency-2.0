@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-line bg-base">
       <div className="shell py-16 md:py-20">
         {/* Oversized wordmark, clipped to the grid — the footer is the last typographic moment. */}
-        <Link href="/" aria-label="Nexa — ballina" className="block">
+        <Link href="/" aria-label="Nexa — home" className="block">
           <span className="block font-display text-[26vw] uppercase leading-[0.78] tracking-[-0.02em] text-ink transition-colors duration-500 hover:text-accent lg:text-[19vw]">
             Nexa
           </span>
@@ -18,8 +18,8 @@ export function Footer() {
         <p className="mt-8 max-w-md font-sans text-sm text-muted">{siteConfig.tagline}</p>
 
         <div className="mt-14 grid gap-10 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
-          <nav aria-label="Navigimi i footer-it">
-            <h2 className="eyebrow mb-5">Faqet</h2>
+          <nav aria-label="Footer navigation">
+            <h2 className="eyebrow mb-5">Pages</h2>
             <ul className="space-y-3">
               {navigation.map((item) => (
                 <li key={item.href}>
@@ -35,7 +35,7 @@ export function Footer() {
           </nav>
 
           <div>
-            <h2 className="eyebrow mb-5">Kontakt</h2>
+            <h2 className="eyebrow mb-5">Contact</h2>
             <ul className="space-y-3 font-sans text-sm">
               <li>
                 <a
@@ -57,7 +57,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="eyebrow mb-5">Rrjete</h2>
+            <h2 className="eyebrow mb-5">Social</h2>
             <ul className="space-y-3 font-sans text-sm">
               <li>
                 <a
@@ -83,14 +83,14 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="eyebrow mb-5">Lokacioni</h2>
+            <h2 className="eyebrow mb-5">Location</h2>
             <p className="font-sans text-sm text-ink">{siteConfig.contact.city}</p>
-            <p className="mt-2 font-sans text-sm text-muted">Punojmë edhe në distancë.</p>
+            <p className="mt-2 font-sans text-sm text-muted">We work remotely too.</p>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-line pt-8 font-sans text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} Nexa. Të gjitha të drejtat e rezervuara.</p>
+          <p>© {year} Nexa. All rights reserved.</p>
           <p>{siteConfig.supporting}</p>
         </div>
       </div>

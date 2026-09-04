@@ -18,7 +18,7 @@ export function JsonLd() {
         telephone: siteConfig.contact.phone,
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Prishtinë',
+          addressLocality: 'Prishtina',
           addressCountry: 'XK',
         },
       },
@@ -34,10 +34,10 @@ export function JsonLd() {
         priceRange: '€€',
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Prishtinë',
+          addressLocality: 'Prishtina',
           addressCountry: 'XK',
         },
-        areaServed: ['Kosovë', 'Zvicër', 'Gjermani', 'Austri'],
+        areaServed: ['Kosovo', 'Switzerland', 'Germany', 'Austria'],
       },
     ],
   }

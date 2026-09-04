@@ -29,11 +29,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description: project.description,
-    alternates: { canonical: `/pune/${project.slug}` },
+    alternates: { canonical: `/work/${project.slug}` },
     openGraph: {
       title: `${title} — Nexa`,
       description: project.description,
-      url: `${siteConfig.url}/pune/${project.slug}`,
+      url: `${siteConfig.url}/work/${project.slug}`,
       images: [{ url: '/images/og/default.svg', width: 1200, height: 630, alt: project.title }],
     },
     twitter: { title: `${title} — Nexa`, description: project.description },
@@ -50,10 +50,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
   const heroCredit = creditFor(project.image)
 
   const chapters = [
-    { label: 'Sfida', body: project.challenge },
-    { label: 'Qasja', body: project.approach },
-    { label: 'Zgjidhja', body: project.solution },
-    { label: 'Rezultati', body: project.result },
+    { label: 'Challenge', body: project.challenge },
+    { label: 'Approach', body: project.approach },
+    { label: 'Solution', body: project.solution },
+    { label: 'Result', body: project.result },
   ]
 
   return (
@@ -61,10 +61,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <header className="pb-12 pt-[calc(var(--header-height)+4rem)]">
         <div className="shell">
           <Link
-            href="/pune"
+            href="/work"
             className="link-underline font-sans text-[12px] uppercase tracking-[0.16em] text-muted transition-colors hover:text-accent"
           >
-            ← Të gjitha punët
+            ← All work
           </Link>
 
           <MaskText
@@ -75,15 +75,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
           <dl className="mt-10 grid gap-6 border-t border-line pt-6 sm:grid-cols-3 lg:max-w-2xl">
             <div>
-              <dt className="eyebrow">Kategoria</dt>
+              <dt className="eyebrow">Category</dt>
               <dd className="mt-1 font-sans text-sm text-ink">{project.category}</dd>
             </div>
             <div>
-              <dt className="eyebrow">Sektori</dt>
+              <dt className="eyebrow">Sector</dt>
               <dd className="mt-1 font-sans text-sm text-ink">{project.sector}</dd>
             </div>
             <div>
-              <dt className="eyebrow">Viti</dt>
+              <dt className="eyebrow">Year</dt>
               <dd className="mt-1 font-sans text-sm text-ink [font-variant-numeric:tabular-nums]">
                 {project.year}
               </dd>
@@ -93,7 +93,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           {project.isPlaceholder && (
             <div className="mt-8">
               <PlaceholderNote>
-                Rast demonstrues — projekt fiktiv i ndërtuar për të treguar mënyrën e punës
+                Demonstration case — a fictional project built to show how we work
               </PlaceholderNote>
             </div>
           )}
@@ -113,7 +113,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {heroCredit && (
         <div className="shell pt-3">
           <figcaption className="font-sans text-[11px] text-muted">
-            Foto:{' '}
+            Photo:{' '}
             <a href={heroCredit.url} target="_blank" rel="noopener noreferrer" className="link-underline">
               {heroCredit.photographer}
             </a>{' '}
@@ -142,8 +142,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <section className="border-y border-line bg-surface py-16">
         <div className="shell">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
-            <Eyebrow>Në shifra</Eyebrow>
-            <PlaceholderNote>Shifra ilustruese — jo rezultate të matura klientësh</PlaceholderNote>
+            <Eyebrow>In numbers</Eyebrow>
+            <PlaceholderNote>Illustrative figures — not measured client results</PlaceholderNote>
           </div>
 
           <dl className="mt-10 grid gap-px bg-line sm:grid-cols-3">
@@ -163,7 +163,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {project.gallery.length > 0 && (
         <section className="shell py-section">
-          <h2 className="sr-only">Galeria e projektit</h2>
+          <h2 className="sr-only">Project gallery</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {project.gallery.map((image, index) => (
               <Reveal
@@ -178,7 +178,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 >
                   <Image
                     src={resolveImage(image)}
-                    alt={altFor(image, `${project.title} — pamje ${index + 1}`)}
+                    alt={altFor(image, `${project.title} — view ${index + 1}`)}
                     fill
                     loading="lazy"
                     sizes={index % 3 === 0 ? '(max-width: 768px) 100vw, 90vw' : '(max-width: 768px) 100vw, 45vw'}
@@ -195,8 +195,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-8">
             <div>
-              <Eyebrow>Projekti i radhës</Eyebrow>
-              <Link href={`/pune/${next.slug}`} className="group mt-4 block">
+              <Eyebrow>Next project</Eyebrow>
+              <Link href={`/work/${next.slug}`} className="group mt-4 block">
                 <h2 className="font-display text-display-sm uppercase text-ink transition-colors duration-300 group-hover:text-accent">
                   {next.title}
                 </h2>

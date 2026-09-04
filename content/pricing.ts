@@ -3,11 +3,11 @@
 export interface PricingTier {
   id: string
   name: string
-  /** Entry price, e.g. "700€". */
+  /** Entry price, e.g. "€700". */
   price: string
-  /** Prefix shown before the price, e.g. "Nga". */
+  /** Prefix shown before the price, e.g. "From". */
   pricePrefix?: string
-  /** Recurring add-on, e.g. "+350€/muaj". */
+  /** Recurring add-on, e.g. "+€350/month". */
   recurring?: string
   description: string
   features: string[]
@@ -16,60 +16,60 @@ export interface PricingTier {
   highlighted: boolean
 }
 
-export const pricingNote = 'Çmimet janë orientuese. Çdo projekt vlerësohet sipas nevojave.'
+export const pricingNote = 'Prices are indicative. Every project is quoted against what it actually needs.'
 
 export const pricingTiers: PricingTier[] = [
   {
     id: 'start',
     name: 'Start',
-    pricePrefix: 'Nga',
-    price: '700€',
-    description: 'Për biznese që u duhet një prezencë profesionale online.',
+    pricePrefix: 'From',
+    price: '€700',
+    description: 'For businesses that need a professional presence online.',
     features: [
-      'Website i personalizuar',
-      'Dizajn responsiv',
-      'SEO bazë',
-      'Formular kontakti',
+      'Custom website',
+      'Responsive design',
+      'Basic SEO',
+      'Contact form',
       'Analytics',
-      'Publikim dhe konfigurim',
+      'Deployment and setup',
     ],
-    cta: 'Fillo projektin',
+    cta: 'Start a project',
     highlighted: false,
   },
   {
     id: 'growth',
     name: 'Growth',
-    pricePrefix: 'Nga',
-    price: '1.500€',
-    recurring: '+350€/muaj',
-    description: 'Për biznese që duan ta përdorin ueb-faqen për të shitur, jo vetëm për t’u dukur.',
+    pricePrefix: 'From',
+    price: '€1,500',
+    recurring: '+€350/month',
+    description: 'For businesses that want the site to sell, not just to look the part.',
     features: [
-      'Gjithçka nga Start',
-      'UX/UI i avancuar',
-      'CMS aty ku nevojitet',
-      'Optimizim për konvertim',
-      'Themel SEO',
-      'Analytics dhe raportim',
-      'Përmirësime mujore',
+      'Everything in Start',
+      'Advanced UX/UI',
+      'CMS where it is needed',
+      'Conversion optimisation',
+      'SEO foundation',
+      'Analytics and reporting',
+      'Monthly improvements',
     ],
-    cta: 'Zgjidh Growth',
+    cta: 'Choose Growth',
     highlighted: true,
   },
   {
     id: 'partner',
     name: 'Partner',
-    price: '600–900€',
-    recurring: '/muaj',
-    description: 'Për biznese që u duhet një partner i vazhdueshëm digjital.',
+    price: '€600–900',
+    recurring: '/month',
+    description: 'For businesses that need an ongoing digital partner.',
     features: [
-      'Përmirësime të vazhdueshme',
+      'Continuous improvements',
       'Landing pages',
-      'Optimizim performance',
-      'Mirëmbajtje e ueb-faqes',
-      'Mbështetje teknike',
-      'Strategji mujore',
+      'Performance optimisation',
+      'Website maintenance',
+      'Technical support',
+      'Monthly strategy',
     ],
-    cta: 'Bëhu partner',
+    cta: 'Become a partner',
     highlighted: false,
   },
 ]

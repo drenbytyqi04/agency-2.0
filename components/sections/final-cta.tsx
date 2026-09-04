@@ -13,12 +13,12 @@ export function FinalCta() {
       />
 
       <div className="shell relative">
-        <MaskText className="text-display-lg text-ink" lines={['Ke një ide?', 'Ta bëjmë realitet.']} />
+        <MaskText className="text-display-lg text-ink" lines={['Got an idea?', 'Let’s make it real.']} />
 
         <Reveal delay={0.15}>
           <div className="mt-12 grid gap-8 border-t border-line pt-8 lg:grid-cols-12">
             <p className="max-w-xl font-sans text-base text-muted lg:col-span-5 lg:col-start-7">
-              Na trego çfarë po ndërton. Ne ta tregojmë si mund ta bëjmë më mirë.
+              Tell us what you are building. We will show you how it could be better.
             </p>
             <div className="lg:col-span-12">
               <ButtonLink href={siteConfig.bookingHref}>{ctas.primary}</ButtonLink>

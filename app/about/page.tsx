@@ -9,14 +9,14 @@ import { team, values } from '@/content/team'
 import { siteConfig } from '@/lib/site'
 
 const description =
-  'Nexa është studio digjitale nga Kosova që kombinon strategjinë, dizajnin dhe zhvillimin për të krijuar përvoja digjitale që kanë qëllim.'
+  'Nexa is a digital studio from Kosovo combining strategy, design and development to build digital experiences with a purpose.'
 
 export const metadata: Metadata = {
-  title: 'Rreth nesh',
+  title: 'About',
   description,
-  alternates: { canonical: '/rreth-nesh' },
-  openGraph: { title: 'Rreth nesh — Nexa', description, url: `${siteConfig.url}/rreth-nesh` },
-  twitter: { title: 'Rreth nesh — Nexa', description },
+  alternates: { canonical: '/about' },
+  openGraph: { title: 'About — Nexa', description, url: `${siteConfig.url}/about` },
+  twitter: { title: 'About — Nexa', description },
 }
 
 export default function AboutPage() {
@@ -24,11 +24,11 @@ export default function AboutPage() {
     <>
       <header className="border-b border-line pb-16 pt-[calc(var(--header-height)+5rem)]">
         <div className="shell">
-          <Eyebrow>Rreth nesh</Eyebrow>
+          <Eyebrow>About</Eyebrow>
           <MaskText
             as="h1"
             className="mt-8 text-display-lg text-ink"
-            lines={['Nexa është', 'punë e mirë,', 'pa zhurmë.']}
+            lines={['Nexa is', 'good work,', 'without the noise.']}
           />
           <p className="mt-10 max-w-2xl font-sans text-lg leading-relaxed text-muted lg:ml-auto">
             {description}
@@ -40,7 +40,7 @@ export default function AboutPage() {
         <div className="shell">
           <div className="grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-3">
-              <Eyebrow>Si punojmë</Eyebrow>
+              <Eyebrow>How we work</Eyebrow>
             </div>
 
             <StaggerGroup className="grid gap-px bg-line sm:grid-cols-2 lg:col-span-9">
@@ -62,9 +62,9 @@ export default function AboutPage() {
       <section className="py-section">
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <MaskText className="text-display-sm text-ink" lines={['Ekipi']} />
+            <MaskText className="text-display-sm text-ink" lines={['The team']} />
             <div className="mb-2">
-              <PlaceholderNote>Ekip demonstrues — profile fiktive</PlaceholderNote>
+              <PlaceholderNote>Placeholder team — fictional profiles</PlaceholderNote>
             </div>
           </div>
 
@@ -94,8 +94,8 @@ export default function AboutPage() {
 
           <Reveal className="mt-16 max-w-2xl border-t border-line pt-8">
             <p className="font-sans text-base text-muted">
-              Punojmë nga {siteConfig.contact.city}, me klientë në Kosovë, Zvicër, Gjermani dhe
-              Austri. Takimet i bëjmë online kur duhet shpejt, dhe personalisht kur ia vlen.
+              We work from {siteConfig.contact.city}, with clients in Kosovo, Switzerland, Germany
+              and Austria. We meet online when speed matters, and in person when it is worth it.
             </p>
           </Reveal>
         </div>

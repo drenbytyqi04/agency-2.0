@@ -8,9 +8,9 @@ export function Testimonials() {
     <Section>
       <div className="shell">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <MaskText className="text-display-sm text-ink" lines={['Çfarë thonë klientët']} />
+          <MaskText className="text-display-sm text-ink" lines={['What clients say']} />
           <div className="mb-2">
-            <PlaceholderNote>Tekste demonstruese — jo dëshmi reale klientësh</PlaceholderNote>
+            <PlaceholderNote>Placeholder quotes — not real client testimonials</PlaceholderNote>
           </div>
         </div>
 

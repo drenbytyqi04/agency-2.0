@@ -37,14 +37,14 @@ export const siteConfig = {
    * or change FALLBACK_SITE_URL above.
    */
   url: resolveSiteUrl(),
-  tagline: 'Ndërtojmë ueb-faqe që sjellin klientë, jo vetëm dizajn.',
-  supporting: 'Strategji. Dizajn. Zhvillim. Rritje.',
+  tagline: 'We build websites that bring clients, not just design.',
+  supporting: 'Strategy. Design. Development. Growth.',
   description:
-    'Nexa është studio digjitale nga Prishtina. Dizajnojmë dhe zhvillojmë ueb-faqe moderne për biznese në Kosovë dhe jashtë saj.',
-  locale: 'sq_AL',
+    'Nexa is a digital studio based in Prishtina, Kosovo. We design and build modern websites for businesses at home and abroad.',
+  locale: 'en_US',
   // Placeholder contact details — replace with the real ones.
   contact: {
-    city: 'Prishtinë, Kosovë',
+    city: 'Prishtina, Kosovo',
     email: 'hello@nexa.studio',
     phone: '+383 44 000 000',
     /** Digits only, for tel: links. */
@@ -55,18 +55,18 @@ export const siteConfig = {
     linkedin: 'https://linkedin.com/',
   },
   /** Where the primary CTA points. Swap for a Cal.com / Calendly link when one exists. */
-  bookingHref: '/kontakt',
+  bookingHref: '/contact',
 } as const
 
 export const navigation = [
-  { href: '/sherbimet', label: 'Shërbimet' },
-  { href: '/pune', label: 'Punët' },
-  { href: '/rreth-nesh', label: 'Rreth nesh' },
-  { href: '/kontakt', label: 'Kontakt' },
+  { href: '/services', label: 'Services' },
+  { href: '/work', label: 'Work' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ] as const
 
 export const ctas = {
-  primary: 'Rezervo thirrje 15 min',
-  primaryShort: 'Rezervo thirrje',
-  secondary: 'Shiko punët',
+  primary: 'Book a 15-min call',
+  primaryShort: 'Book a call',
+  secondary: 'See our work',
 } as const

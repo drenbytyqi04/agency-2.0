@@ -38,12 +38,12 @@ export function Header() {
           <Link
             href="/"
             className="font-display text-2xl uppercase leading-none tracking-[0.08em] text-ink transition-colors hover:text-accent"
-            aria-label="Nexa — ballina"
+            aria-label="Nexa — home"
           >
             Nexa
           </Link>
 
-          <nav className="hidden lg:block" aria-label="Navigimi kryesor">
+          <nav className="hidden lg:block" aria-label="Main navigation">
             <ul className="flex items-center gap-9">
               {navigation.map((item) => {
                 const active = pathname === item.href || pathname.startsWith(`${item.href}/`)
@@ -76,7 +76,7 @@ export function Header() {
               type="button"
               onClick={() => setMenuOpen(true)}
               className="-mr-2 flex h-12 w-12 items-center justify-center text-ink lg:hidden"
-              aria-label="Hap menunë"
+              aria-label="Open menu"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
             >

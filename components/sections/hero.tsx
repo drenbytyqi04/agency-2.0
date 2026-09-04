@@ -17,7 +17,7 @@ export function Hero() {
         <Reveal>
           <p className="eyebrow flex items-center gap-3">
             <span aria-hidden="true" className="inline-block h-px w-8 bg-accent" />
-            Digital studio / Kosovë + Remote
+            Digital studio / Kosovo + Remote
           </p>
         </Reveal>
 
@@ -25,19 +25,19 @@ export function Hero() {
           as="h1"
           delay={0.1}
           className="mt-8 text-display-lg text-ink"
-          lines={['Ndërtojmë', 'ueb-faqe që', 'sjellin klientë.']}
+          lines={['We build', 'websites that', 'bring clients.']}
         />
 
         <div className="mt-12 grid gap-10 border-t border-line pt-8 lg:grid-cols-12">
           <Reveal delay={0.15} className="lg:col-span-5 lg:col-start-7">
             <p className="max-w-xl font-sans text-base text-muted">
-              Dizajnojmë dhe zhvillojmë ueb-faqe moderne që i bëjnë bizneset të duken më mirë, të
-              performojnë më shpejt dhe të shesin më shumë.
+              We design and build modern websites that make businesses look sharper, perform
+              faster and sell more.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={siteConfig.bookingHref}>{ctas.primary}</ButtonLink>
-              <ButtonLink href="/pune" variant="ghost">
+              <ButtonLink href="/work" variant="ghost">
                 {ctas.secondary}
               </ButtonLink>
             </div>

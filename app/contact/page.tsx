@@ -6,14 +6,14 @@ import { Eyebrow } from '@/components/ui/section'
 import { siteConfig } from '@/lib/site'
 
 const description =
-  'Ke një projekt, një ide ose thjesht dëshiron të dish çfarë mund të përmirësohet? Na shkruaj.'
+  'Have a project, an idea, or just want to know what could be improved? Get in touch.'
 
 export const metadata: Metadata = {
-  title: 'Kontakt',
+  title: 'Contact',
   description,
-  alternates: { canonical: '/kontakt' },
-  openGraph: { title: 'Kontakt — Nexa', description, url: `${siteConfig.url}/kontakt` },
-  twitter: { title: 'Kontakt — Nexa', description },
+  alternates: { canonical: '/contact' },
+  openGraph: { title: 'Contact — Nexa', description, url: `${siteConfig.url}/contact` },
+  twitter: { title: 'Contact — Nexa', description },
 }
 
 export default function ContactPage() {
@@ -22,14 +22,14 @@ export default function ContactPage() {
       <div className="shell">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-16">
           <div className="lg:col-span-5">
-            <Eyebrow>Kontakt</Eyebrow>
-            <MaskText as="h1" className="mt-8 text-display-md text-ink" lines={['Le të flasim.']} />
+            <Eyebrow>Contact</Eyebrow>
+            <MaskText as="h1" className="mt-8 text-display-md text-ink" lines={['Let’s talk.']} />
 
             <p className="mt-8 max-w-md font-sans text-base text-muted">{description}</p>
 
             <dl className="mt-14 space-y-8 border-t border-line pt-10">
               <div>
-                <dt className="eyebrow">Lokacioni</dt>
+                <dt className="eyebrow">Location</dt>
                 <dd className="mt-2 font-sans text-lg text-ink">{siteConfig.contact.city}</dd>
               </div>
               <div>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 </dd>
               </div>
               <div>
-                <dt className="eyebrow">Telefon</dt>
+                <dt className="eyebrow">Phone</dt>
                 <dd className="mt-2">
                   <a
                     href={`tel:${siteConfig.contact.phoneHref}`}
@@ -58,7 +58,7 @@ export default function ContactPage() {
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">
-            <h2 className="sr-only">Formulari i kontaktit</h2>
+            <h2 className="sr-only">Contact form</h2>
             <ContactForm />
           </div>
         </div>

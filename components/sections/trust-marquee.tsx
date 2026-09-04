@@ -9,9 +9,9 @@ export function TrustMarquee() {
   const items = [...placeholderClients, ...placeholderClients]
 
   return (
-    <section aria-label="Marka demonstruese" className="overflow-hidden border-y border-line py-10">
+    <section aria-label="Placeholder brands" className="overflow-hidden border-y border-line py-10">
       <div className="shell mb-8">
-        <PlaceholderNote>Emra demonstrues — jo klientë realë</PlaceholderNote>
+        <PlaceholderNote>Placeholder names — not real clients</PlaceholderNote>
       </div>
 
       {/* Duplicated track: the animation translates by exactly -50% for a seamless loop. */}

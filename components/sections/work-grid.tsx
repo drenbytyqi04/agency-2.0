@@ -10,11 +10,11 @@ import type { ProjectView } from '@/lib/project-view'
 
 /** Client-side filtered portfolio grid. Filtering never touches the network. */
 export function WorkGrid({ projects }: { projects: ProjectView[] }) {
-  const [active, setActive] = useState<ProjectCategory | 'Të gjitha'>('Të gjitha')
+  const [active, setActive] = useState<ProjectCategory | 'All'>('All')
   const reduced = useReducedMotion()
 
   const visible = useMemo(
-    () => (active === 'Të gjitha' ? projects : projects.filter((p) => p.category === active)),
+    () => (active === 'All' ? projects : projects.filter((p) => p.category === active)),
     [active, projects],
   )
 
@@ -48,11 +48,11 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
 
       <div className="shell py-16 md:py-24">
         {/* Keeps the heading order intact between the page h1 and the h3 on each card. */}
-        <h2 className="sr-only">Projektet</h2>
+        <h2 className="sr-only">Projects</h2>
 
         {/* aria-live keeps screen readers informed when the result count changes. */}
         <p className="sr-only" aria-live="polite">
-          {visible.length} projekte të shfaqura
+          {visible.length} projects shown
         </p>
 
         <div className="grid gap-x-8 gap-y-16 md:grid-cols-2">
@@ -79,7 +79,7 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
 
         {visible.length === 0 && (
           <p className="py-20 text-center font-sans text-sm text-muted">
-            Nuk ka projekte në këtë kategori.
+            No projects in this category.
           </p>
         )}
       </div>

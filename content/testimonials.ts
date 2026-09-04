@@ -22,24 +22,24 @@ export const testimonials: Testimonial[] = [
   {
     id: 'placeholder-1',
     quote:
-      'Website-i i ri na dha një prezencë shumë më profesionale dhe procesi i rezervimeve u bë shumë më i thjeshtë.',
-    author: 'Klient demonstrues',
-    role: 'Hotelieri',
+      'The new website gave us a far more professional presence, and booking became much simpler for our guests.',
+    author: 'Placeholder client',
+    role: 'Hospitality',
     isPlaceholder: true,
   },
   {
     id: 'placeholder-2',
     quote:
-      'Për herë të parë e kuptojmë se nga vijnë kërkesat. Faqja nuk është vetëm e bukur, është e matshme.',
-    author: 'Klient demonstrues',
-    role: 'Shërbime profesionale',
+      'For the first time we understand where our enquiries come from. The site is not just good-looking, it is measurable.',
+    author: 'Placeholder client',
+    role: 'Professional services',
     isPlaceholder: true,
   },
   {
     id: 'placeholder-3',
     quote:
-      'Punuan shpejt dhe pa zhurmë. Çdo pyetje mori përgjigje të qartë, edhe kur përgjigjja ishte “kjo nuk ia vlen”.',
-    author: 'Klient demonstrues',
+      'They worked fast and without noise. Every question got a straight answer, including when the answer was “this is not worth doing”.',
+    author: 'Placeholder client',
     role: 'Retail',
     isPlaceholder: true,
   },

@@ -12,11 +12,11 @@ import { NextResponse } from 'next/server'
  */
 
 const BUDGETS = [
-  'Nën 700€',
-  '700€–1.500€',
-  '1.500€–3.000€',
-  'Mbi 3.000€',
-  'Nuk jam i sigurt',
+  'Under €700',
+  '€700–€1,500',
+  '€1,500–€3,000',
+  'Over €3,000',
+  'Not sure yet',
 ] as const
 
 interface ContactPayload {
@@ -33,20 +33,20 @@ function validate(body: Partial<ContactPayload>): Record<string, string> {
   const errors: Record<string, string> = {}
 
   if (!body.name?.trim() || body.name.trim().length < 2) {
-    errors.name = 'Shkruaj emrin.'
+    errors.name = 'Please enter your name.'
   }
   if (!body.email?.trim() || !EMAIL_PATTERN.test(body.email.trim())) {
-    errors.email = 'Shkruaj një email të vlefshëm.'
+    errors.email = 'Please enter a valid email address.'
   }
   if (!body.message?.trim() || body.message.trim().length < 10) {
-    errors.message = 'Përshkruaj shkurt projektin (të paktën 10 karaktere).'
+    errors.message = 'Tell us briefly about the project (at least 10 characters).'
   }
   if (body.budget && !BUDGETS.includes(body.budget as (typeof BUDGETS)[number])) {
-    errors.budget = 'Zgjedhje e pavlefshme.'
+    errors.budget = 'Invalid selection.'
   }
   // Length caps keep an abusive payload from reaching the mail provider later.
   if (body.message && body.message.length > 4000) {
-    errors.message = 'Mesazhi është shumë i gjatë.'
+    errors.message = 'That message is too long.'
   }
 
   return errors
@@ -58,7 +58,7 @@ export async function POST(request: Request) {
   try {
     body = await request.json()
   } catch {
-    return NextResponse.json({ ok: false, error: 'Kërkesë e pavlefshme.' }, { status: 400 })
+    return NextResponse.json({ ok: false, error: 'Invalid request.' }, { status: 400 })
   }
 
   const errors = validate(body)
@@ -76,7 +76,7 @@ export async function POST(request: Request) {
   }
 
   // TODO: replace with the email provider call described above.
-  console.info('[contact] kërkesë e re', { email: data.email, budget: data.budget })
+  console.info('[contact] new enquiry', { email: data.email, budget: data.budget })
 
-  return NextResponse.json({ ok: true, message: 'Faleminderit. Do të kthehemi brenda 24 orësh.' })
+  return NextResponse.json({ ok: true, message: 'Thank you. We will get back to you within 24 hours.' })
 }

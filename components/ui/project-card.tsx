@@ -21,7 +21,7 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
 
   return (
     <article className="group">
-      <Link href={`/pune/${project.slug}`} className="block">
+      <Link href={`/work/${project.slug}`} className="block">
         <div className={`relative ${aspect} overflow-hidden bg-surface`}>
           <Image
             src={project.src}
@@ -40,7 +40,7 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
             aria-hidden="true"
             className="absolute bottom-5 right-5 translate-y-2 border border-accent bg-base/70 px-4 py-2 font-sans text-[11px] uppercase tracking-[0.16em] text-accent opacity-0 backdrop-blur-sm transition-all duration-500 ease-editorial group-hover:translate-y-0 group-hover:opacity-100"
           >
-            Shiko rastin
+            View case
           </span>
         </div>
 

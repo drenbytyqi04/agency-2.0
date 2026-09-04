@@ -44,7 +44,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/l1ONpGNOZeE/download',
     photographer: 'Franco Debartolo',
     photographerUrl: 'https://unsplash.com/@francotheshooter',
-    alt: 'Dy karrige përballë një dritareje të madhe me pamje nga ndërtesat e qytetit',
+    alt: 'Two chairs facing a large window overlooking city buildings',
   },
   {
     file: '/images/projects/nova-stays-02.jpg',
@@ -54,7 +54,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/VGgmG8Se47M/download',
     photographer: 'Clay Banks',
     photographerUrl: 'https://unsplash.com/@claybanks',
-    alt: 'Dhomë gjumi në tone neutrale me kolltuk dhe rafte druri',
+    alt: 'A neutral-toned bedroom with an armchair and wooden shelving',
   },
   {
     file: '/images/projects/nova-stays-03.jpg',
@@ -64,7 +64,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/Ph2AIj8vOwo/download',
     photographer: 'Clay Banks',
     photographerUrl: 'https://unsplash.com/@claybanks',
-    alt: 'Dy shtretër në një dhomë rustike me dritare të mëdha',
+    alt: 'Two beds in a rustic room with large windows',
   },
   {
     file: '/images/projects/nova-stays-04.jpg',
@@ -74,7 +74,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/bhoMFZB_6Bg/download',
     photographer: 'Clay Banks',
     photographerUrl: 'https://unsplash.com/@claybanks',
-    alt: 'Dhomë e ndriçuar me tavolinë pune dhe shtrat të gjerë',
+    alt: 'A bright room with a writing desk and a wide bed',
   },
 
   // --- FORMA ARCHITECTS (architecture) ---
@@ -86,7 +86,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/wMLKJNtml9Q/download',
     photographer: 'Olga Schraven',
     photographerUrl: 'https://unsplash.com/@olgaschraven',
-    alt: 'Fasadë moderne ndërtese me motive gjeometrike të përsëritura',
+    alt: 'A modern building facade with repeating geometric patterns',
   },
   {
     file: '/images/projects/forma-architects-02.jpg',
@@ -96,7 +96,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/DjclooRnMrY/download',
     photographer: 'rawkkim',
     photographerUrl: 'https://unsplash.com/@rawkkim',
-    alt: 'Pamje nga poshtë lart e rrokaqiejve modernë përballë qiellit të kthjellët',
+    alt: 'Modern skyscrapers seen from below against a clear sky',
   },
   {
     file: '/images/projects/forma-architects-03.jpg',
@@ -106,7 +106,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/XIWA8_767pU/download',
     photographer: 'Mike Hindle',
     photographerUrl: 'https://unsplash.com/@mikehindle',
-    alt: 'Kompozim simetrik abstrakt i ndërtesave moderne',
+    alt: 'A symmetrical abstract composition of modern buildings',
   },
   {
     file: '/images/projects/forma-architects-04.jpg',
@@ -116,7 +116,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/GXezEZC429E/download',
     photographer: 'Alex Lvrs',
     photographerUrl: 'https://unsplash.com/@alexlvrs',
-    alt: 'Pamje ajrore e çative dhe ndërtesave moderne të qytetit',
+    alt: 'An aerial view of modern city rooftops and buildings',
   },
 
   // --- MIRA RESTAURANT (hospitality) ---
@@ -128,7 +128,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/EjHiN2KxTO4/download',
     photographer: 'Oliver Guhr',
     photographerUrl: 'https://unsplash.com/@oliverguhr',
-    alt: 'Sallë restoranti me ndriçim të ulët, tavolina dhe karrige druri',
+    alt: 'A dimly lit restaurant room with wooden tables and chairs',
   },
   {
     file: '/images/projects/mira-restaurant-02.jpg',
@@ -138,7 +138,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/WYmNFpyKn1o/download',
     photographer: 'Martin Baron',
     photographerUrl: 'https://unsplash.com/@elmartinbaron',
-    alt: 'Interier restoranti me tavolina, karrige dhe bimë të gjelbra',
+    alt: 'A restaurant interior with tables, chairs and green plants',
   },
   {
     file: '/images/projects/mira-restaurant-03.jpg',
@@ -148,7 +148,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/iNmnw2RU5yg/download',
     photographer: 'Martin Baron',
     photographerUrl: 'https://unsplash.com/@elmartinbaron',
-    alt: 'Banak bari me rafte shishesh në sfond të errët',
+    alt: 'A bar counter with shelves of bottles against a dark background',
   },
 
   // --- KORA COMMERCE (e-commerce) ---
@@ -160,7 +160,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/KZXk9ip6Y5E/download',
     photographer: 'Valeriia Miller',
     photographerUrl: 'https://unsplash.com/@valeriiamiller',
-    alt: 'Produkte kozmetike të radhitura me kujdes në një raft',
+    alt: 'Cosmetic products arranged neatly on a shelf',
   },
   {
     file: '/images/projects/kora-commerce-02.jpg',
@@ -170,7 +170,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/0CQHIvRfbMQ/download',
     photographer: 'Danielle Suijkerbuijk',
     photographerUrl: 'https://unsplash.com/@vandaantje',
-    alt: 'Kompozim botanik i gjelbër që lëshon hije mbi sipërfaqe të ndritshme',
+    alt: 'A green botanical arrangement casting a shadow on a bright surface',
   },
   {
     file: '/images/projects/kora-commerce-03.jpg',
@@ -180,7 +180,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/ShEuc7fCL0g/download',
     photographer: 'Jon Tyson',
     photographerUrl: 'https://unsplash.com/@jontyson',
-    alt: 'Vazo me lule mbi një tavolinë të bardhë minimale',
+    alt: 'A vase of flowers on a minimal white table',
   },
 
   // --- ALBA SERVICES (professional services) ---
@@ -192,7 +192,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/oMCC7gKDBYE/download',
     photographer: 'Anton Lammert',
     photographerUrl: 'https://unsplash.com/@anton_lammert',
-    alt: 'Hije arkitekturore mbi një mur betoni, bardh e zi',
+    alt: 'Architectural shadows across a concrete wall, in black and white',
   },
   {
     file: '/images/projects/alba-services-02.jpg',
@@ -202,7 +202,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/ulFAi1jkNcA/download',
     photographer: 'Jonny James',
     photographerUrl: 'https://unsplash.com/@jonnyjames2',
-    alt: 'Strukturë betoni e lakuar, fotografi bardh e zi',
+    alt: 'A curved concrete structure, photographed in black and white',
   },
   {
     file: '/images/projects/alba-services-03.jpg',
@@ -212,7 +212,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/irzV4osXXkA/download',
     photographer: 'Robert Keane',
     photographerUrl: 'https://unsplash.com/@keano16',
-    alt: 'Detaj i një strukture betoni me linja të forta, bardh e zi',
+    alt: 'A detail of a concrete structure with strong lines, in black and white',
   },
 
   // --- NORDIC INTERIORS (interior design) ---
@@ -224,7 +224,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/Wkqs3XD8JPk/download',
     photographer: 'Franco Debartolo',
     photographerUrl: 'https://unsplash.com/@francotheshooter',
-    alt: 'Dhomë ndenjeje moderne me art abstrakt dhe mobilje të buta',
+    alt: 'A modern living room with abstract art and soft furniture',
   },
   {
     file: '/images/projects/nordic-interiors-02.jpg',
@@ -234,7 +234,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/33zre8PKCdo/download',
     photographer: 'Clay Banks',
     photographerUrl: 'https://unsplash.com/@claybanks',
-    alt: 'Dhomë ndenjeje me divan qoshe dhe stufë druri',
+    alt: 'A living room with a sectional sofa and a wood stove',
   },
   {
     file: '/images/projects/nordic-interiors-03.jpg',
@@ -244,7 +244,7 @@ export const imageSources: ImageSource[] = [
     downloadLocation: 'https://api.unsplash.com/photos/hh8CQEJGS5Q/download',
     photographer: 'Clay Banks',
     photographerUrl: 'https://unsplash.com/@claybanks',
-    alt: 'Pamje nga kati i sipërm mbi një dhomë ndenjeje me tavan të lartë',
+    alt: 'A view from the upper floor over a living room with a high ceiling',
   },
 ]
 

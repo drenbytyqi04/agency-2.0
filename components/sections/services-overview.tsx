@@ -7,15 +7,15 @@ import { serviceGroups } from '@/content/services'
 
 export function ServicesOverview() {
   return (
-    <Section id="sherbimet">
+    <Section id="services">
       <div className="shell">
         <div className="grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Eyebrow>Çfarë bëjmë</Eyebrow>
+            <Eyebrow>What we do</Eyebrow>
           </div>
           <MaskText
             className="text-display-md text-ink lg:col-span-8"
-            lines={['Digjitalin e bëjmë', 'të thjeshtë.']}
+            lines={['We make digital', 'simple.']}
           />
         </div>
 
@@ -50,10 +50,10 @@ export function ServicesOverview() {
 
         <div className="mt-10">
           <Link
-            href="/sherbimet"
+            href="/services"
             className="link-underline font-sans text-[13px] uppercase tracking-[0.16em] text-ink transition-colors hover:text-accent"
           >
-            Të gjitha shërbimet
+            All services
           </Link>
         </div>
       </div>
