@@ -92,6 +92,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
           </dl>
 
+          {project.liveUrl && (
+            <div className="mt-8">
+              <ButtonLink href={project.liveUrl} variant="ghost" size="sm">
+                View live site
+              </ButtonLink>
+            </div>
+          )}
+
           {project.isPlaceholder && (
             <div className="mt-8">
               <PlaceholderNote>

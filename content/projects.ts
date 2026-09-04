@@ -22,6 +22,8 @@ export interface Project {
   sector: string
   year: string
   description: string
+  /** Public URL of the live site, when there is one to link to. */
+  liveUrl?: string
   image: string
   gallery: string[]
   featured: boolean
