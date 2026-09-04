@@ -76,7 +76,13 @@ person is depicted as a member of the studio.
 
 `lib/site.ts` holds the domain, contact details, social links and CTA target. The placeholder
 values there (`hello@nexa.studio`, `+383 44 000 000`, `https://nexa.studio`) are the ones to
-change first. The origin can also be set with `NEXT_PUBLIC_SITE_URL`.
+change first.
+
+The public origin can also be set with `NEXT_PUBLIC_SITE_URL`. It is normalised before use:
+blank or whitespace counts as unset, a missing protocol is assumed to be `https`, a trailing
+slash is stripped, and an unparseable value falls back to `FALLBACK_SITE_URL` rather than
+failing the build. That matters because `metadataBase` parses this value at build time, and
+a hosting provider with the variable defined but empty would otherwise break every page.
 
 ## Contact form
 

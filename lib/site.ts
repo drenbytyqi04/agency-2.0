@@ -2,10 +2,41 @@
  * Single place to change the deployment domain, contact details and social handles.
  * Everything else in the app reads from here.
  */
+
+/** Used whenever NEXT_PUBLIC_SITE_URL is absent, blank or unparseable. */
+const FALLBACK_SITE_URL = 'https://nexa.studio'
+
+/**
+ * Resolves the public origin.
+ *
+ * `metadataBase` feeds this straight into `new URL()`, which throws and fails the whole
+ * build if the value is empty — and a hosting provider setting the variable to an empty
+ * string is exactly the case `??` does not catch, since '' is neither null nor undefined.
+ * So the value is trimmed, given a protocol if it lacks one, and parsed; anything invalid
+ * falls back rather than breaking the build.
+ */
+function resolveSiteUrl(): string {
+  const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim()
+  if (!configured) return FALLBACK_SITE_URL
+
+  const withProtocol = /^https?:\/\//i.test(configured) ? configured : `https://${configured}`
+
+  try {
+    const url = new URL(withProtocol)
+    // Keep any base path, drop the trailing slash so joined URLs never double up.
+    return `${url.origin}${url.pathname}`.replace(/\/$/, '')
+  } catch {
+    return FALLBACK_SITE_URL
+  }
+}
+
 export const siteConfig = {
   name: 'Nexa',
-  /** Replace with the production origin before launch. No trailing slash. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nexa.studio',
+  /**
+   * Production origin, without a trailing slash. Override with NEXT_PUBLIC_SITE_URL,
+   * or change FALLBACK_SITE_URL above.
+   */
+  url: resolveSiteUrl(),
   tagline: 'Ndërtojmë ueb-faqe që sjellin klientë, jo vetëm dizajn.',
   supporting: 'Strategji. Dizajn. Zhvillim. Rritje.',
   description:
