@@ -60,7 +60,7 @@ async function download(url: string, destination: string): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  console.log(`Nexa · image sync — ${imageSources.length} photos`)
+  console.log(`Nexa · image sync — ${imageSources.length} images`)
   if (!accessKey) {
     console.log('UNSPLASH_ACCESS_KEY not set: downloading from the verified URLs in the manifest')
     console.log('without download tracking. Set the key in .env.local to enable it.\n')
@@ -80,9 +80,11 @@ async function main(): Promise<void> {
 
     try {
       await download(remoteImageUrl(source, TARGET_WIDTH, QUALITY), destination)
-      await trackDownload(source.downloadLocation)
+      // Only the stock library asks to be told about a download.
+      if (source.kind === 'unsplash') await trackDownload(source.downloadLocation)
       downloaded += 1
-      console.log(`  ✓ ${source.file}  · ${source.photographer}`)
+      const attribution = source.kind === 'unsplash' ? ` · ${source.photographer}` : ''
+      console.log(`  ✓ ${source.file}${attribution}`)
     } catch (error) {
       failures.push(`${source.file}: ${(error as Error).message}`)
       console.warn(`  ✗ ${source.file} — ${(error as Error).message}`)

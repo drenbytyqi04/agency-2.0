@@ -47,12 +47,13 @@ export function altFor(file: string, fallback: string): string {
 }
 
 /**
- * Photo credit for an image. Returned whenever the photo is a real photograph — served
- * locally or from the CDN — since Unsplash asks for attribution either way.
+ * Photo credit for an image, or null when none is owed — our own project screenshots have
+ * no third party to attribute. Stock photos are credited whether served locally or from the
+ * CDN, since the licence asks for it either way.
  */
 export function creditFor(file: string): { photographer: string; url: string } | null {
   const source = imageSourceByFile.get(file)
-  if (!source) return null
+  if (!source || source.kind !== 'unsplash') return null
   return { photographer: source.photographer, url: source.photographerUrl }
 }
 
