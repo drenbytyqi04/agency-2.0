@@ -35,10 +35,12 @@ export function Process() {
           {processSteps.map((step) => (
             <li
               key={step.index}
-              className="w-[78vw] max-w-sm shrink-0 snap-start border border-line bg-surface p-8"
+              className={`w-[78vw] max-w-sm shrink-0 snap-start rounded-panel border bg-surface/50 p-8 ${
+                step.index === '01' ? 'border-l-2 border-l-accent border-y-line border-r-line' : 'border-line'
+              }`}
             >
-              <span className="font-display text-5xl leading-none text-accent">{step.index}</span>
-              <h3 className="mt-6 font-display text-3xl uppercase leading-none text-ink">
+              <span className="font-display text-4xl font-semibold leading-none text-accent [font-variant-numeric:tabular-nums]">{step.index}</span>
+              <h3 className="mt-6 font-display text-3xl leading-none text-ink">
                 {step.title}
               </h3>
               <p className="mt-4 font-sans text-sm text-muted">{step.description}</p>
@@ -63,7 +65,7 @@ export function Process() {
                       {step.index}
                     </span>
                     <div className="pt-4">
-                      <h3 className="font-display text-6xl uppercase leading-none text-ink">
+                      <h3 className="font-display text-6xl leading-none text-ink">
                         {step.title}
                       </h3>
                       <p className="mt-6 max-w-md font-sans text-lg text-muted">{step.description}</p>

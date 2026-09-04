@@ -23,7 +23,7 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
   return (
     <article className="group">
       <Link href={`/work/${project.slug}`} className="block">
-        <div className={`relative ${aspect} overflow-hidden bg-surface`}>
+        <div className={`relative ${aspect} overflow-hidden rounded-card bg-surface`}>
           <Image
             src={project.src}
             alt={project.alt}
@@ -40,14 +40,14 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
           {/* Hover marker, hidden from assistive tech — the link already announces the action. */}
           <span
             aria-hidden="true"
-            className="absolute bottom-5 right-5 translate-y-2 border border-accent bg-base/70 px-4 py-2 font-sans text-[11px] uppercase tracking-[0.16em] text-accent opacity-0 backdrop-blur-sm transition-all duration-500 ease-editorial group-hover:translate-y-0 group-hover:opacity-100"
+            className="absolute bottom-5 right-5 translate-y-2 rounded-full border border-accent bg-base/70 px-5 py-2 font-sans text-[11px] tracking-[0.02em] text-accent opacity-0 backdrop-blur-sm transition-all duration-500 ease-editorial group-hover:translate-y-0 group-hover:opacity-100"
           >
             View case
           </span>
         </div>
 
         <div className="mt-5 flex items-baseline justify-between gap-6 border-t border-line pt-4">
-          <h3 className="font-display text-2xl uppercase leading-none text-ink transition-colors duration-300 group-hover:text-accent md:text-3xl">
+          <h3 className="font-display text-2xl leading-none text-ink transition-colors duration-300 group-hover:text-accent md:text-3xl">
             {project.title}
           </h3>
           <span className="shrink-0 font-sans text-[11px] uppercase tracking-[0.18em] text-muted">

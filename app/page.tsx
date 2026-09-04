@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import { Commitments } from '@/components/sections/commitments'
 import { FeaturedWork } from '@/components/sections/featured-work'
 import { FinalCta } from '@/components/sections/final-cta'
 import { Hero } from '@/components/sections/hero'
@@ -22,6 +23,7 @@ export default function HomePage() {
       <Hero />
       <TrustMarquee />
       <ServicesOverview />
+      <Commitments />
       <FeaturedWork />
       <Process />
       <Pricing />

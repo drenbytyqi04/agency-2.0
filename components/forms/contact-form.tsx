@@ -133,7 +133,7 @@ export function ContactForm() {
         className="border border-accent/40 bg-surface p-10"
       >
         <span aria-hidden="true" className="mb-6 block h-px w-10 bg-accent" />
-        <h3 className="font-display text-3xl uppercase leading-none text-ink">Request sent</h3>
+        <h3 className="font-display text-3xl leading-none text-ink">Request sent</h3>
         <p className="mt-4 font-sans text-sm text-muted">{feedback}</p>
         <button
           type="button"

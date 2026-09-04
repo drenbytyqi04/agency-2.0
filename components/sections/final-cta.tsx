@@ -1,5 +1,6 @@
 import { MaskText } from '@/components/animations/mask-text'
 import { Reveal } from '@/components/animations/reveal'
+import { AccentWord } from '@/components/ui/accent-word'
 import { ButtonLink } from '@/components/ui/button'
 import { ctas, siteConfig } from '@/lib/site'
 
@@ -9,11 +10,11 @@ export function FinalCta() {
       <div aria-hidden="true" className="texture-grid absolute inset-0 opacity-60" />
       <div
         aria-hidden="true"
-        className="absolute -left-32 bottom-0 h-[30rem] w-[30rem] rounded-full bg-accent/[0.06] blur-[120px]"
+        className="ambient-glow -left-32 bottom-0 h-[30rem] w-[30rem] bg-[#1f7a4d]/20"
       />
 
       <div className="shell relative">
-        <MaskText className="text-display-lg text-ink" lines={['Got an idea?', 'Let’s make it real.']} />
+        <MaskText className="text-display-lg text-ink" lines={['Got an idea?', <>Let’s make it <AccentWord>real</AccentWord>.</>]} />
 
         <Reveal delay={0.15}>
           <div className="mt-12 grid gap-8 border-t border-line pt-8 lg:grid-cols-12">

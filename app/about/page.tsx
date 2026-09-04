@@ -47,7 +47,7 @@ export default function AboutPage() {
               {values.map((value) => (
                 <StaggerItem key={value.title}>
                   <div className="h-full bg-base p-8 md:p-10">
-                    <h2 className="font-display text-3xl uppercase leading-none text-ink">
+                    <h2 className="font-display text-3xl leading-none text-ink">
                       {value.title}
                     </h2>
                     <p className="mt-4 font-sans text-sm text-muted">{value.description}</p>
@@ -76,11 +76,11 @@ export default function AboutPage() {
                       misrepresented as part of the team. */}
                   <div
                     aria-hidden="true"
-                    className="flex h-24 w-24 items-center justify-center border border-line bg-surface font-display text-3xl uppercase text-accent"
+                    className="flex h-24 w-24 items-center justify-center border border-line bg-surface font-display text-3xl text-accent"
                   >
                     {member.initials}
                   </div>
-                  <h3 className="mt-8 font-display text-2xl uppercase leading-none text-ink">
+                  <h3 className="mt-8 font-display text-2xl leading-none text-ink">
                     {member.name}
                   </h3>
                   <p className="mt-2 font-sans text-xs uppercase tracking-[0.16em] text-accent">

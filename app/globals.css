@@ -24,10 +24,11 @@
     overflow-x: hidden;
   }
 
-  /* Editorial display type: condensed, uppercase, tight. */
+  /* Display type: geometric sans, title case, tight tracking and leading. */
   h1, h2, h3 {
-    @apply font-display uppercase;
+    @apply font-display;
     font-weight: 600;
+    letter-spacing: -0.03em;
     text-wrap: balance;
   }
 
@@ -68,9 +69,22 @@
     @apply border-t border-line;
   }
 
-  /* Eyebrow label: small, tracked-out, muted. */
+  /* Eyebrow label: small, tracked-out, muted, preceded by an accent dot. */
   .eyebrow {
-    @apply font-sans text-[11px] uppercase tracking-[0.22em] text-muted;
+    @apply flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] text-muted;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent;
+  }
+
+  /* Soft ambient wash: a wide, low-opacity colour bloom behind key sections. */
+  .ambient-glow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(130px);
+    pointer-events: none;
   }
 
   /* Fine grid + noise used behind the hero and the final CTA. */

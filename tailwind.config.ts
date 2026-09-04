@@ -25,17 +25,23 @@ const config: Config = {
         danger: '#FF6B5A',
       },
       fontFamily: {
-        display: ['var(--font-display)', 'Barlow Condensed', 'Impact', 'sans-serif'],
+        display: ['var(--font-body)', 'Jost', 'system-ui', 'sans-serif'],
         sans: ['var(--font-body)', 'Jost', 'system-ui', 'sans-serif'],
+        // Italic serif, used only for the emphasised word inside a heading.
+        accent: ['var(--font-accent)', 'Instrument Serif', 'Georgia', 'serif'],
       },
       fontSize: {
         // Editorial display scale. Fluid so 375px and 1920px each get an intentional size.
-        'display-sm': ['clamp(2.25rem, 7vw, 3.5rem)', { lineHeight: '0.92', letterSpacing: '-0.01em' }],
-        'display-md': ['clamp(2.75rem, 9vw, 6rem)', { lineHeight: '0.9', letterSpacing: '-0.015em' }],
-        'display-lg': ['clamp(3.25rem, 11.5vw, 9.5rem)', { lineHeight: '0.86', letterSpacing: '-0.02em' }],
+        'display-sm': ['clamp(1.9rem, 4.4vw, 2.9rem)', { lineHeight: '1.06', letterSpacing: '-0.03em' }],
+        'display-md': ['clamp(2.3rem, 5.6vw, 4rem)', { lineHeight: '1.03', letterSpacing: '-0.035em' }],
+        'display-lg': ['clamp(2.8rem, 7vw, 5.4rem)', { lineHeight: '1', letterSpacing: '-0.04em' }],
       },
       maxWidth: {
         shell: '1400px',
+      },
+      borderRadius: {
+        card: '1.25rem',
+        panel: '1.75rem',
       },
       spacing: {
         gutter: 'clamp(1.25rem, 4vw, 3.5rem)',

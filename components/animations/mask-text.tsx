@@ -2,10 +2,14 @@
 
 import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { useRef } from 'react'
+import type { ReactNode } from 'react'
 
 interface MaskTextProps {
-  /** One entry per visual line. Lines are masked and revealed in sequence. */
-  lines: string[]
+  /**
+   * One entry per visual line. Lines are masked and revealed in sequence.
+   * A line may be rich content, so a heading can carry an italic-serif accent word.
+   */
+  lines: ReactNode[]
   className?: string
   /** Rendered element. Headings should pass the right level for the page. */
   as?: 'h1' | 'h2' | 'p'
@@ -31,7 +35,7 @@ export function MaskText({ lines, className, as: Tag = 'h2', delay = 0 }: MaskTe
   return (
     <Tag ref={ref} className={className}>
       {lines.map((line, index) => (
-        <span key={line} className="mask-line">
+        <span key={index} className="mask-line">
           <motion.span
             className="block"
             initial={false}

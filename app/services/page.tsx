@@ -51,7 +51,7 @@ export default function ServicesPage() {
               <span className="font-sans text-[11px] tracking-[0.2em] text-accent">
                 {service.index}
               </span>
-              <h2 className="mt-4 font-display text-4xl uppercase leading-[0.92] text-ink md:text-5xl">
+              <h2 className="mt-4 font-display text-4xl leading-[0.92] text-ink md:text-5xl">
                 {service.title}
               </h2>
               <dl className="mt-8 space-y-5">

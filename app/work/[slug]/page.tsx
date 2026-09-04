@@ -133,7 +133,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-20">
           {chapters.map((chapter) => (
             <Reveal key={chapter.label}>
-              <h2 className="font-display text-3xl uppercase leading-none text-ink">
+              <h2 className="font-display text-3xl leading-none text-ink">
                 {chapter.label}
               </h2>
               <p className="mt-5 max-w-xl font-sans text-base text-muted">{chapter.body}</p>
@@ -209,7 +209,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <div>
               <Eyebrow>Next project</Eyebrow>
               <Link href={`/work/${next.slug}`} className="group mt-4 block">
-                <h2 className="font-display text-display-sm uppercase text-ink transition-colors duration-300 group-hover:text-accent">
+                <h2 className="font-display text-display-sm text-ink transition-colors duration-300 group-hover:text-accent">
                   {next.title}
                 </h2>
               </Link>

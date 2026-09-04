@@ -37,7 +37,7 @@ export function Header() {
         >
           <Link
             href="/"
-            className="font-display text-2xl uppercase leading-none tracking-[0.08em] text-ink transition-colors hover:text-accent"
+            className="font-display text-2xl font-semibold uppercase leading-none tracking-[0.06em] text-ink transition-colors hover:text-accent"
             aria-label="Nexa — home"
           >
             Nexa
@@ -52,7 +52,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       aria-current={active ? 'page' : undefined}
-                      className={`link-underline font-sans text-[13px] uppercase tracking-[0.14em] transition-colors ${
+                      className={`link-underline font-sans text-[13px] tracking-[0.01em] transition-colors ${
                         active ? 'text-accent' : 'text-muted hover:text-ink'
                       }`}
                     >
@@ -67,7 +67,7 @@ export function Header() {
           <div className="flex items-center gap-2">
             <Link
               href={siteConfig.bookingHref}
-              className="hidden min-h-[44px] items-center border border-line-strong px-5 font-sans text-[12px] uppercase tracking-[0.14em] text-ink transition-colors duration-300 hover:border-accent hover:text-accent lg:inline-flex"
+              className="hidden min-h-[46px] items-center rounded-full border border-line-strong px-6 font-sans text-[12px] font-medium text-ink transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-accent-ink lg:inline-flex"
             >
               {ctas.primaryShort}
             </Link>

@@ -10,7 +10,7 @@ export function Footer() {
       <div className="shell py-16 md:py-20">
         {/* Oversized wordmark, clipped to the grid — the footer is the last typographic moment. */}
         <Link href="/" aria-label="Nexa — home" className="block">
-          <span className="block font-display text-[26vw] uppercase leading-[0.78] tracking-[-0.02em] text-ink transition-colors duration-500 hover:text-accent lg:text-[19vw]">
+          <span className="block font-display text-[24vw] font-semibold uppercase leading-[0.82] tracking-[-0.03em] text-ink transition-colors duration-500 hover:text-accent lg:text-[18vw]">
             Nexa
           </span>
         </Link>

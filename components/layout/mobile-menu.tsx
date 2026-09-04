@@ -69,7 +69,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="flex h-[var(--header-height)] shrink-0 items-center justify-between px-gutter">
-            <span className="font-display text-2xl uppercase tracking-[0.08em]">Nexa</span>
+            <span className="font-display text-2xl tracking-[0.08em]">Nexa</span>
             <button
               type="button"
               onClick={onClose}
@@ -94,7 +94,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className="flex items-baseline gap-4 py-5 font-display text-[13vw] uppercase leading-none text-ink transition-colors hover:text-accent"
+                      className="flex items-baseline gap-4 py-5 font-display text-[12vw] font-semibold leading-none tracking-[-0.03em] text-ink transition-colors hover:text-accent"
                     >
                       {/* Decorative ordinal: hidden so the link announces as "Services", not "01 Services". */}
                       <span
@@ -115,7 +115,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             <Link
               href={siteConfig.bookingHref}
               onClick={onClose}
-              className="flex min-h-[48px] w-full items-center justify-center bg-accent px-6 py-4 font-sans text-[13px] uppercase tracking-[0.16em] text-accent-ink"
+              className="flex min-h-[52px] w-full items-center justify-center rounded-full bg-accent px-6 py-4 font-sans text-[13px] font-medium text-accent-ink"
             >
               {ctas.primary}
             </Link>

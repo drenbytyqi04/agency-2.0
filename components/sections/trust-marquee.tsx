@@ -21,7 +21,7 @@ export function TrustMarquee() {
             <span
               key={`${name}-${index}`}
               aria-hidden={index >= placeholderClients.length}
-              className="select-none font-display text-4xl uppercase tracking-[0.06em] text-muted/45 md:text-5xl"
+              className="select-none font-display text-4xl tracking-[0.06em] text-muted/45 md:text-5xl"
             >
               {name}
             </span>

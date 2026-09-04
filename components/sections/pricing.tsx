@@ -1,6 +1,7 @@
 import { MaskText } from '@/components/animations/mask-text'
 import { StaggerGroup, StaggerItem } from '@/components/animations/stagger'
 import { ButtonLink } from '@/components/ui/button'
+import { AccentWord } from '@/components/ui/accent-word'
 import { Section } from '@/components/ui/section'
 import { pricingNote, pricingTiers } from '@/content/pricing'
 import { siteConfig } from '@/lib/site'
@@ -9,22 +10,24 @@ export function Pricing() {
   return (
     <Section id="pricing">
       <div className="shell">
-        <MaskText className="max-w-4xl text-display-md text-ink" lines={['Choose how', 'we work together.']} />
+        <MaskText className="max-w-4xl text-display-md text-ink" lines={['Choose how we', <>work <AccentWord>together</AccentWord>.</>]} />
 
-        <StaggerGroup className="mt-16 grid gap-px bg-line lg:grid-cols-3">
+        <StaggerGroup className="mt-16 grid gap-5 lg:grid-cols-3">
           {pricingTiers.map((tier) => (
             <StaggerItem key={tier.id}>
               <div
-                className={`flex h-full flex-col p-8 md:p-10 ${
-                  tier.highlighted ? 'bg-surface ring-1 ring-inset ring-accent/40' : 'bg-base'
+                className={`flex h-full flex-col rounded-panel border p-8 md:p-10 ${
+                  tier.highlighted
+                    ? 'border-accent/45 bg-surface'
+                    : 'border-line bg-surface/40'
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="font-display text-3xl uppercase leading-none text-ink">
+                  <h3 className="font-display text-3xl leading-none text-ink">
                     {tier.name}
                   </h3>
                   {tier.highlighted && (
-                    <span className="border border-accent px-2.5 py-1 font-sans text-[10px] uppercase tracking-[0.16em] text-accent">
+                    <span className="rounded-full border border-accent px-3 py-1 font-sans text-[10px] uppercase tracking-[0.14em] text-accent">
                       Most chosen
                     </span>
                   )}

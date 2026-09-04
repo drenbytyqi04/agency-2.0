@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Barlow_Condensed, Jost } from 'next/font/google'
+import { Instrument_Serif, Jost } from 'next/font/google'
 
 import { CustomCursor } from '@/components/layout/custom-cursor'
 import { Footer } from '@/components/layout/footer'
@@ -9,17 +9,22 @@ import { siteConfig } from '@/lib/site'
 
 import './globals.css'
 
-const display = Barlow_Condensed({
+/**
+ * One geometric sans carries both display and body weights, with a single italic serif used
+ * only for emphasis words inside headings. Two families, clearly distinct in role.
+ */
+const sans = Jost({
   subsets: ['latin', 'latin-ext'],
-  weight: ['600'],
-  variable: '--font-display',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-body',
   display: 'swap',
 })
 
-const body = Jost({
-  subsets: ['latin', 'latin-ext'],
-  weight: ['400', '500'],
-  variable: '--font-body',
+const accent = Instrument_Serif({
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['italic'],
+  variable: '--font-accent',
   display: 'swap',
 })
 
@@ -56,7 +61,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={`${sans.variable} ${accent.variable}`}>
       <body>
         <a
           href="#main"

@@ -6,13 +6,42 @@ import { useRef, useState } from 'react'
 import type { ComponentProps, ReactNode } from 'react'
 
 type Variant = 'primary' | 'ghost'
+type Size = 'md' | 'sm'
 
 const base =
-  'group relative inline-flex items-center justify-center gap-3 border px-7 py-4 font-sans text-[13px] uppercase tracking-[0.16em] transition-colors duration-300 ease-editorial cursor-pointer min-h-[48px]'
+  'group relative inline-flex items-center justify-center gap-3 rounded-full border font-sans font-medium tracking-[0.01em] transition-colors duration-300 ease-editorial cursor-pointer'
+
+const sizes: Record<Size, string> = {
+  md: 'min-h-[52px] py-3 pl-7 pr-3 text-[13px]',
+  sm: 'min-h-[44px] py-2 pl-5 pr-2 text-[12px]',
+}
 
 const variants: Record<Variant, string> = {
   primary: 'border-accent bg-accent text-accent-ink hover:bg-transparent hover:text-accent',
   ghost: 'border-line-strong text-ink hover:border-accent hover:text-accent',
+}
+
+/**
+ * Circular arrow that sits inside the pill, echoing the button's own shape.
+ * Decorative: the label already names the action.
+ */
+function ArrowBadge({ variant, size }: { variant: Variant; size: Size }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`flex shrink-0 items-center justify-center rounded-full transition-all duration-300 ease-editorial group-hover:rotate-45 ${
+        size === 'sm' ? 'h-8 w-8' : 'h-9 w-9'
+      } ${
+        variant === 'primary'
+          ? 'bg-accent-ink text-accent group-hover:bg-accent group-hover:text-accent-ink'
+          : 'bg-ink/10 text-ink group-hover:bg-accent group-hover:text-accent-ink'
+      }`}
+    >
+      <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
+        <path d="M3 11L11 3M11 3H4.5M11 3v6.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  )
 }
 
 /**
@@ -42,10 +71,17 @@ interface ButtonLinkProps {
   href: string
   children: ReactNode
   variant?: Variant
+  size?: Size
   className?: string
 }
 
-export function ButtonLink({ href, children, variant = 'primary', className = '' }: ButtonLinkProps) {
+export function ButtonLink({
+  href,
+  children,
+  variant = 'primary',
+  size = 'md',
+  className = '',
+}: ButtonLinkProps) {
   const { ref, offset, handleMove, reset } = useMagnetic()
   const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')
 
@@ -56,12 +92,13 @@ export function ButtonLink({ href, children, variant = 'primary', className = ''
       transition={{ type: 'spring', stiffness: 260, damping: 22, mass: 0.4 }}
     >
       {children}
+      <ArrowBadge variant={variant} size={size} />
     </motion.span>
   )
 
   const props = {
     ref: ref as never,
-    className: `${base} ${variants[variant]} ${className}`,
+    className: `${base} ${sizes[size]} ${variants[variant]} ${className}`,
     onPointerMove: handleMove,
     onPointerLeave: reset,
     onBlur: reset,
@@ -85,12 +122,14 @@ export function ButtonLink({ href, children, variant = 'primary', className = ''
 export function Button({
   children,
   variant = 'primary',
+  size = 'md',
   className = '',
   ...rest
-}: ComponentProps<'button'> & { variant?: Variant }) {
+}: ComponentProps<'button'> & { variant?: Variant; size?: Size }) {
   return (
-    <button className={`${base} ${variants[variant]} ${className}`} {...rest}>
+    <button className={`${base} ${sizes[size]} ${variants[variant]} ${className}`} {...rest}>
       {children}
+      <ArrowBadge variant={variant} size={size} />
     </button>
   )
 }

@@ -9,6 +9,7 @@ The site is in English throughout — interface copy, routes (`/services`, `/wor
 
 - Next.js 15 (App Router) · React 19 · TypeScript
 - Tailwind CSS 3 with design tokens in `tailwind.config.ts`
+- Type: Jost for display and body, Instrument Serif italic for emphasis words only
 - Framer Motion for micro-interactions
 - Server Components by default; Client Components only where interaction requires them
 
@@ -67,6 +68,15 @@ consumers. The key is read only inside the Node script — it never reaches the 
 Downloaded photos are not committed. Until they exist, `lib/images.ts` resolves each path to an
 on-brand SVG placeholder in `public/images/placeholders/`, so a fresh clone builds and renders
 correctly with no network access. Drop the real photos in and they take precedence automatically.
+
+## Design language
+
+Dark ground, lime accent used sparingly, and a rounded card language (`rounded-card`,
+`rounded-panel`, pill buttons with a circular arrow). Headings are title case with tight
+tracking; a single italic serif word carries the emphasis — see
+`components/ui/accent-word.tsx`. Section labels are uppercase micro-type preceded by an
+accent dot (`.eyebrow`), and key sections sit on a soft ambient colour bloom
+(`.ambient-glow`).
 
 ## Content
 

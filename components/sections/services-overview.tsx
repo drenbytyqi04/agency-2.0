@@ -1,7 +1,7 @@
-import Link from 'next/link'
-
 import { MaskText } from '@/components/animations/mask-text'
 import { StaggerGroup, StaggerItem } from '@/components/animations/stagger'
+import { AccentWord } from '@/components/ui/accent-word'
+import { ButtonLink } from '@/components/ui/button'
 import { Eyebrow, Section } from '@/components/ui/section'
 import { serviceGroups } from '@/content/services'
 
@@ -15,18 +15,18 @@ export function ServicesOverview() {
           </div>
           <MaskText
             className="text-display-md text-ink lg:col-span-8"
-            lines={['We make digital', 'simple.']}
+            lines={['We deliver work that', <>makes digital <AccentWord>simple</AccentWord>.</>]}
           />
         </div>
 
-        <StaggerGroup className="mt-20 grid gap-px border-t border-line bg-line md:grid-cols-3">
+        <StaggerGroup className="mt-16 grid gap-5 md:grid-cols-3">
           {serviceGroups.map((group) => (
-            <StaggerItem key={group.index} className="bg-base">
-              <div className="group h-full bg-base p-8 transition-colors duration-500 ease-editorial hover:bg-surface md:p-10">
+            <StaggerItem key={group.index}>
+              <div className="group h-full rounded-panel border border-line bg-surface/50 p-8 transition-colors duration-500 ease-editorial hover:border-line-strong hover:bg-surface md:p-10">
                 <span className="font-sans text-[11px] tracking-[0.2em] text-accent">
                   {group.index}
                 </span>
-                <h3 className="mt-5 font-display text-3xl uppercase leading-none text-ink md:text-4xl">
+                <h3 className="mt-5 font-display text-3xl leading-none text-ink md:text-4xl">
                   {group.title}
                 </h3>
                 <ul className="mt-8 space-y-3">
@@ -49,12 +49,9 @@ export function ServicesOverview() {
         </StaggerGroup>
 
         <div className="mt-10">
-          <Link
-            href="/services"
-            className="link-underline font-sans text-[13px] uppercase tracking-[0.16em] text-ink transition-colors hover:text-accent"
-          >
+          <ButtonLink href="/services" variant="ghost" size="sm">
             All services
-          </Link>
+          </ButtonLink>
         </div>
       </div>
     </Section>

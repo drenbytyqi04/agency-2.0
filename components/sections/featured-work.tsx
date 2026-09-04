@@ -1,8 +1,8 @@
-import Link from 'next/link'
-
 import { MaskText } from '@/components/animations/mask-text'
 import { Reveal } from '@/components/animations/reveal'
 import { ProjectCard } from '@/components/ui/project-card'
+import { AccentWord } from '@/components/ui/accent-word'
+import { ButtonLink } from '@/components/ui/button'
 import { PhotoCredits } from '@/components/ui/photo-credits'
 import { PlaceholderNote, Section } from '@/components/ui/section'
 import { featuredProjects } from '@/content/projects'
@@ -15,13 +15,10 @@ export function FeaturedWork() {
     <Section id="work">
       <div className="shell">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <MaskText className="text-display-md text-ink" lines={['Work that speaks.']} />
-          <Link
-            href="/work"
-            className="link-underline mb-2 font-sans text-[13px] uppercase tracking-[0.16em] text-ink transition-colors hover:text-accent"
-          >
+          <MaskText className="text-display-md text-ink" lines={[<>Work that <AccentWord>speaks</AccentWord>.</>]} />
+          <ButtonLink href="/work" variant="ghost" size="sm" className="mb-2">
             All work
-          </Link>
+          </ButtonLink>
         </div>
 
         <div className="mt-6">

@@ -17,6 +17,11 @@ import { PLACEHOLDER_PREFIX } from '@/lib/image-src'
  * Server-only: `existsSync` means this resolves at build time for static pages.
  */
 export function resolveImage(file: string): string {
+  // Escape hatch for environments with no route to the photo CDN (offline work, restricted
+  // networks, screenshot runs): IMAGE_MODE=placeholder renders the local artwork instead of
+  // leaving broken images behind.
+  if (process.env.IMAGE_MODE === 'placeholder') return placeholderFor(file)
+
   if (existsSync(join(process.cwd(), 'public', file))) return file
 
   const source = imageSourceByFile.get(file)
