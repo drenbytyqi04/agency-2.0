@@ -50,6 +50,15 @@ export function withAttribution(url: string): string {
 }
 
 export const imageSources: ImageSource[] = [
+  // --- AZ UTAH (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-utah-01.png',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/662b9c7b69053462362f22b0/664483b7d9d802583f57501b_Share%20Image.png',
+    alt: 'The AZ Utah website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

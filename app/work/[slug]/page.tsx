@@ -8,7 +8,7 @@ import { Reveal } from '@/components/animations/reveal'
 import { ButtonLink } from '@/components/ui/button'
 import { PhotoCredits } from '@/components/ui/photo-credits'
 import { Eyebrow, PlaceholderNote } from '@/components/ui/section'
-import { getNextProject, getProject, projects } from '@/content/projects'
+import { caseStudyProjects, getNextProject, getProject } from '@/content/projects'
 import { isPlaceholderSrc } from '@/lib/image-src'
 import { altFor, creditFor, resolveImage } from '@/lib/images'
 import { ctas, siteConfig } from '@/lib/site'
@@ -18,7 +18,7 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }))
+  return caseStudyProjects.map((project) => ({ slug: project.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

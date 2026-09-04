@@ -21,9 +21,15 @@ export interface Project {
   /** Short descriptor shown under the title, e.g. the sector. */
   sector: string
   year: string
-  description: string
+  /** Optional: a project shown as a straight link out may carry no blurb at all. */
+  description?: string
   /** Public URL of the live site, when there is one to link to. */
   liveUrl?: string
+  /**
+   * When true the card opens `liveUrl` directly and no case study page is generated.
+   * For work that speaks for itself and has no write-up behind it.
+   */
+  linksToLiveSite?: boolean
   image: string
   gallery: string[]
   featured: boolean
@@ -46,6 +52,21 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'az-utah',
+    title: 'AZ Utah',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-utah.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-utah-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
   {
     slug: 'nova-stays',
     title: 'Nova Stays',
@@ -245,12 +266,15 @@ export const projectCategories: Array<ProjectCategory | 'All'> = [
   'Systems',
 ]
 
+/** Projects that have a case study page. Straight links to a live site do not. */
+export const caseStudyProjects = projects.filter((project) => !project.linksToLiveSite)
+
 export function getProject(slug: string): Project | undefined {
-  return projects.find((project) => project.slug === slug)
+  return caseStudyProjects.find((project) => project.slug === slug)
 }
 
 /** Next project in the list, wrapping around — used at the end of a case study. */
 export function getNextProject(slug: string): Project {
-  const index = projects.findIndex((project) => project.slug === slug)
-  return projects[(index + 1) % projects.length]
+  const index = caseStudyProjects.findIndex((project) => project.slug === slug)
+  return caseStudyProjects[(index + 1) % caseStudyProjects.length]
 }

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-import { projects } from '@/content/projects'
+import { caseStudyProjects } from '@/content/projects'
 import { siteConfig } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,7 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }))
 
-  const projectRoutes = projects.map((project) => ({
+  // Only projects that actually have a page — link-only entries have no route to index.
+  const projectRoutes = caseStudyProjects.map((project) => ({
     url: `${siteConfig.url}/work/${project.slug}`,
     lastModified,
     changeFrequency: 'yearly' as const,
