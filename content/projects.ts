@@ -30,10 +30,14 @@ export interface Project {
   /** True while this is demonstration content rather than a delivered client project. */
   isPlaceholder: boolean
   intro: string
-  challenge: string
-  approach: string
-  solution: string
-  result: string
+  /**
+   * The case-study narrative. Optional on purpose: a project should never carry a story
+   * written from guesswork. Sections with nothing to say are omitted rather than filled.
+   */
+  challenge?: string
+  approach?: string
+  solution?: string
+  result?: string
   /**
    * Optional. Demonstration projects carry illustrative figures, which the UI labels as such.
    * Real projects should only carry numbers that can actually be stood behind.
@@ -56,15 +60,7 @@ export const projects: Project[] = [
     featured: true,
     isPlaceholder: false,
     intro:
-      'AZ Delaware is a Webflow template built as a product rather than for a single client: a complete multi-page business site that someone can take, fill with their own content and launch.',
-    challenge:
-      'A template has to work for businesses we will never meet. Every page has to hold up with content of a length we cannot predict, and it has to stay editable by someone who has never opened Webflow before.',
-    approach:
-      'We designed it around a restrained system — one typeface, a deep green accent, generous white space — so the template carries a point of view without imposing one. Structure came before decoration: what pages a business actually needs, and in what order.',
-    solution:
-      'Home, about, features, blog and shop, with the blog and products driven by Webflow CMS collections so they grow without touching the design. Navigation, cart and contact are wired up and ready to use.',
-    result:
-      'A template that can be launched as-is or used as the starting point for a bespoke build.',
+      'AZ Delaware is a Webflow template built as a product rather than for a single client: a complete multi-page business site — home, about, features, blog and shop — that can be filled with real content and launched.',
   },
 
   {
@@ -110,7 +106,6 @@ export const projects: Project[] = [
     image: '/images/projects/forma-architects-01.jpg',
     gallery: [
       '/images/projects/forma-architects-02.jpg',
-      '/images/projects/forma-architects-03.jpg',
       '/images/projects/forma-architects-04.jpg',
     ],
     featured: true,

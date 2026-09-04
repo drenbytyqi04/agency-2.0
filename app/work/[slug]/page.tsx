@@ -51,12 +51,13 @@ export default async function CaseStudyPage({ params }: PageProps) {
   const heroSrc = resolveImage(project.image)
   const heroCredit = creditFor(project.image)
 
+  // Only render the sections that actually have something written for them.
   const chapters = [
     { label: 'Challenge', body: project.challenge },
     { label: 'Approach', body: project.approach },
     { label: 'Solution', body: project.solution },
     { label: 'Result', body: project.result },
-  ]
+  ].filter((chapter): chapter is { label: string; body: string } => Boolean(chapter.body))
 
   return (
     <article>
@@ -138,6 +139,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
           {project.intro}
         </p>
 
+        {chapters.length > 0 && (
         <div className="mt-20 grid gap-12 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-20">
           {chapters.map((chapter) => (
             <Reveal key={chapter.label}>
@@ -148,6 +150,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </Reveal>
           ))}
         </div>
+        )}
       </section>
 
       {project.metrics && project.metrics.length > 0 && (
