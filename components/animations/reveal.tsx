@@ -19,18 +19,19 @@ export function Reveal({ children, delay = 0, className, as = 'div' }: RevealPro
   const reduced = useReducedMotion()
   const Component = motion[as]
 
-  if (reduced) {
-    const Static = as
-    return <Static className={className}>{children}</Static>
-  }
-
+  // Reduced motion still gets a fade — opacity alone carries no movement, so the page
+  // reads as alive without the translation that causes the problem.
   return (
     <Component
       className={className}
-      initial={{ opacity: 0, y: 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={reduced ? { opacity: 0 } : { opacity: 0, y: 14 }}
+      whileInView={reduced ? { opacity: 1 } : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '0px 0px -10% 0px' }}
-      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={
+        reduced
+          ? { duration: 0.3, delay: 0, ease: 'linear' }
+          : { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }
+      }
     >
       {children}
     </Component>

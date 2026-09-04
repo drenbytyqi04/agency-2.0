@@ -48,13 +48,20 @@
       scroll-behavior: auto;
     }
 
-    /* Motion is decoration here; content must render in its final state. */
+    /*
+     * Reduce motion, don't remove feedback.
+     *
+     * Movement is what causes trouble, so looping and transform-based animation is stopped
+     * and transitions are restricted to colour and opacity. Hover and focus states still
+     * respond, which keeps the interface legible rather than making it feel broken.
+     */
     *,
     *::before,
     *::after {
       animation-duration: 0.001ms !important;
       animation-iteration-count: 1 !important;
-      transition-duration: 0.001ms !important;
+      transition-property: color, background-color, border-color, opacity, fill, stroke !important;
+      transition-duration: 150ms !important;
       scroll-behavior: auto !important;
     }
   }
