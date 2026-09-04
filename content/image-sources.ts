@@ -50,15 +50,6 @@ export function withAttribution(url: string): string {
 }
 
 export const imageSources: ImageSource[] = [
-  // --- AZ DELAWARE (Nexa's own work) ---
-  {
-    kind: 'own',
-    file: '/images/projects/az-delaware-01.webp',
-    baseUrl:
-      'https://cdn.prod.website-files.com/654221e257c92df6e9d06243/65d61fa05074b0c6f39a342a_Home-p-800.webp',
-    alt: 'Home page of the AZ Delaware website',
-  },
-
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

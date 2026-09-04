@@ -33,7 +33,9 @@ export default function WorkPage() {
           />
           <div className="mt-10">
             <PlaceholderNote>
-              Cards marked “demo” are demonstration content, not delivered work
+              {projects.every((project) => project.isPlaceholder)
+                ? 'Demonstration projects — not work delivered for clients'
+                : 'Cards marked “demo” are demonstration content, not delivered work'}
             </PlaceholderNote>
           </div>
         </div>

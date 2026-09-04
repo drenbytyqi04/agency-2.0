@@ -47,23 +47,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'az-delaware',
-    title: 'AZ Delaware',
-    category: 'Websites',
-    sector: 'Business & consulting template',
-    year: '2024',
-    liveUrl: 'https://az-delaware.webflow.io/',
-    description:
-      'A multi-page Webflow template for business and consulting sites, with a CMS-driven blog and a built-in shop.',
-    image: '/images/projects/az-delaware-01.webp',
-    gallery: [],
-    featured: true,
-    isPlaceholder: false,
-    intro:
-      'AZ Delaware is a Webflow template built as a product rather than for a single client: a complete multi-page business site — home, about, features, blog and shop — that can be filled with real content and launched.',
-  },
-
-  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

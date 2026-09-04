@@ -11,6 +11,7 @@ import type { ProjectView } from '@/lib/project-view'
 /** Client-side filtered portfolio grid. Filtering never touches the network. */
 export function WorkGrid({ projects }: { projects: ProjectView[] }) {
   const [active, setActive] = useState<ProjectCategory | 'All'>('All')
+  const allDemo = projects.every((project) => project.isPlaceholder)
   const reduced = useReducedMotion()
 
   const visible = useMemo(
@@ -71,6 +72,7 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
                   project={project}
                   size={index % 3 === 0 ? 'lg' : 'md'}
                   priority={index === 0}
+                  showDemoChip={!allDemo}
                 />
               </motion.div>
             ))}
