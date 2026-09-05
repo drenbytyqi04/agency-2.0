@@ -218,6 +218,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-tirana',
+    title: 'AZ Tirana',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2023',
+    liveUrl: 'https://az-tirana.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-tirana-01.webp',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

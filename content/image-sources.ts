@@ -149,6 +149,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Panama website',
   },
 
+  // --- AZ TIRANA (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-tirana-01.webp',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/654a42c3e8cf6332f79e80b8/654e4eccbcd32bdad6a316bc_Tirana-Share.webp',
+    alt: 'The AZ Tirana website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',
