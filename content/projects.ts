@@ -203,6 +203,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-panama',
+    title: 'AZ Panama',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-panama.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-panama-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

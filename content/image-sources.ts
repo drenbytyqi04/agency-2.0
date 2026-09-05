@@ -140,6 +140,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Washington website',
   },
 
+  // --- AZ PANAMA (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-panama-01.png',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/66436189035e4b5076a33ee8/6655e88529b4019ad9e564d0_Share%20Image.png',
+    alt: 'The AZ Panama website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',
