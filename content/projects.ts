@@ -128,6 +128,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-bali',
+    title: 'AZ Bali',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-bali.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-bali-01.webp',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

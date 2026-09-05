@@ -95,6 +95,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Melbourne website',
   },
 
+  // --- AZ BALI (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-bali-01.webp',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/65b0d975ca7b9ae3079f600a/65c0cc1a267f73938f38d0eb_Bali%20Share%20Image.webp',
+    alt: 'The AZ Bali website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',
