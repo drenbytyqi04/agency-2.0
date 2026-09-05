@@ -59,6 +59,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Utah website',
   },
 
+  // --- AZ IOWA (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-iowa-01.avif',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/66b0deec483a0496679c6baf/66b8eee1f8f1d06c15729cb0_Share%20Image.avif',
+    alt: 'The AZ Iowa website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

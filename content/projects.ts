@@ -68,6 +68,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-iowa',
+    title: 'AZ Iowa',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-lowa.webflow.io/home/home-v1',
+    linksToLiveSite: true,
+    image: '/images/projects/az-iowa-01.avif',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',
