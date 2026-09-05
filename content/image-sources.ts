@@ -167,6 +167,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Doha website',
   },
 
+  // --- AZ GALWAY (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-galway-01.webp',
+    baseUrl:
+      'https://cdn.prod.website-files.com/64f709df5f44977b52a39183/64ff2334e7dbb2c6416a9e82_Buy-Image.webp',
+    alt: 'The AZ Galway website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

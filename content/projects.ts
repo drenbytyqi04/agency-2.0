@@ -248,6 +248,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-galway',
+    title: 'AZ Galway',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2023',
+    liveUrl: 'https://az-galway.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-galway-01.webp',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',
