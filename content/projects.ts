@@ -173,6 +173,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-hawaii',
+    title: 'AZ Hawaii',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-hawaii.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-hawaii-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

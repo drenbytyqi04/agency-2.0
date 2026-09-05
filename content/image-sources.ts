@@ -122,6 +122,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Palermo website',
   },
 
+  // --- AZ HAWAII (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-hawaii-01.png',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/65ddd6fdff73da8b76febd81/65eef1a91d177030788731d8_Share%20Image.png',
+    alt: 'The AZ Hawaii website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',
