@@ -188,6 +188,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-washington',
+    title: 'AZ Washington',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2023',
+    liveUrl: 'https://az-washington.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-washington-01.webp',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

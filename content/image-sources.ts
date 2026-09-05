@@ -131,6 +131,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Hawaii website',
   },
 
+  // --- AZ WASHINGTON (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-washington-01.webp',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/64c8d0026165123ac91679b5/64df68ad46ca4c034d2930af_Share%20Image.webp',
+    alt: 'The AZ Washington website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',
