@@ -176,6 +176,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Galway website',
   },
 
+  // --- AZ BELFAST (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-belfast-01.png',
+    baseUrl:
+      'https://cdn.prod.website-files.com/66f2c90a1e2adf5e253e3d6d/66fa7f7a569bf012aeb65c43_Share%20Image.png',
+    alt: 'The AZ Belfast website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

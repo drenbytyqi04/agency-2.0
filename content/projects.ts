@@ -263,6 +263,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-belfast',
+    title: 'AZ Belfast',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-belfast.webflow.io/homepage/homepage-v1',
+    linksToLiveSite: true,
+    image: '/images/projects/az-belfast-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

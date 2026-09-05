@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#17171B"/>
+      <stop offset="100%" stop-color="#0B0B0D"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#wash)"/>
+  <rect x="0" y="55" width="320" height="1134" fill="rgba(198,255,63,0.10)"/><rect x="320" y="87" width="320" height="1083" fill="rgba(242,240,235,0.027)"/><rect x="640" y="7" width="320" height="1191" fill="rgba(242,240,235,0.025)"/><rect x="960" y="1" width="320" height="1199" fill="rgba(242,240,235,0.042)"/><rect x="1280" y="22" width="320" height="1170" fill="rgba(242,240,235,0.045)"/>
+  <rect width="1600" height="1200" fill="url(#grid)"/>
+  <path d="M173 0 L593 1200" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/><path d="M984 0 L1404 1200" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/><path d="M269 0 L689 1200" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/>
+  
+  <circle cx="696" cy="484" r="347" fill="none" stroke="rgba(198,255,63,0.22)" stroke-width="1.5"/>
+  <circle cx="696" cy="484" r="215" fill="none" stroke="rgba(242,240,235,0.10)" stroke-width="1"/>
+  <rect x="0" y="809" width="1600" height="391" fill="rgba(11,11,13,0.55)"/>
+  <rect x="0" y="809" width="1600" height="1" fill="rgba(255,255,255,0.14)"/>
+</svg>
