@@ -158,6 +158,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-palermo',
+    title: 'AZ Palermo',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-palermo.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-palermo-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

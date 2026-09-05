@@ -113,6 +113,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ New Zealand website',
   },
 
+  // --- AZ PALERMO (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-palermo-01.png',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/65c0fb3cadeb13600562bfe2/65dda83f5c31d4c732ba38ea_Share%20Image.png',
+    alt: 'The AZ Palermo website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',
