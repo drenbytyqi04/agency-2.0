@@ -104,6 +104,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Bali website',
   },
 
+  // --- AZ NEW ZEALAND (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-new-zealand-01.png',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/65fc09cc06f822c9e0bce732/660ea76827b989d0c1c7efdf_Share%20Image.png',
+    alt: 'The AZ New Zealand website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

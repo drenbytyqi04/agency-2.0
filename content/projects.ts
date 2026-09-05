@@ -143,6 +143,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-new-zealand',
+    title: 'AZ New Zealand',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-new-zealand.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-new-zealand-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',
