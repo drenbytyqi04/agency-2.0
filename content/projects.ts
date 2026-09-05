@@ -113,6 +113,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-melbourne',
+    title: 'AZ Melbourne',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-melbourne.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-melbourne-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',

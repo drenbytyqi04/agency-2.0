@@ -86,6 +86,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Montana website',
   },
 
+  // --- AZ MELBOURNE (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-melbourne-01.png',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/6686b34714ab28490660b6fe/6697c410a624e37eca7f6177_Share%20Image.png',
+    alt: 'The AZ Melbourne website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',
