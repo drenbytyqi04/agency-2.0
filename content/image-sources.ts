@@ -158,6 +158,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Tirana website',
   },
 
+  // --- AZ DOHA (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-doha-01.jpg',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/651ec1e289febb8d52431f26/654114ea280959436d6cf2c5_Share%20Image.jpg',
+    alt: 'The AZ Doha website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

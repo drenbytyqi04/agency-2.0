@@ -233,6 +233,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-doha',
+    title: 'AZ Doha',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2023',
+    liveUrl: 'https://az-doha.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-doha-01.jpg',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',
