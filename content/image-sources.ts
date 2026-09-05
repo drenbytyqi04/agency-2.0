@@ -77,6 +77,15 @@ export const imageSources: ImageSource[] = [
     alt: 'The AZ Vermont website',
   },
 
+  // --- AZ MONTANA (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-montana-01.png',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/668e45daa5a9b2e423712e85/66ac984c55e6fb26e0910a56_Share%20Image.png',
+    alt: 'The AZ Montana website',
+  },
+
   // --- NOVA STAYS (hospitality) ---
   {
     kind: 'unsplash',

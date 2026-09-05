@@ -15,7 +15,7 @@
  * Run with: npm run placeholders
  */
 
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readdir, unlink, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
 import { imageSources } from '../content/image-sources'
@@ -102,9 +102,21 @@ function svgFor(name: string): string {
 
 async function main(): Promise<void> {
   await mkdir(OUT_DIR, { recursive: true })
+
+  const written = new Set<string>(['fallback.svg'])
   for (const source of imageSources) {
     const name = source.file.split('/').pop()!.replace(/\.[a-z]+$/i, '')
     await writeFile(join(OUT_DIR, `${name}.svg`), svgFor(name), 'utf8')
+    written.add(`${name}.svg`)
+  }
+
+  // Drop placeholders for images that are no longer in the manifest, so removing a photo
+  // does not leave an orphan behind.
+  for (const existing of await readdir(OUT_DIR)) {
+    if (existing.endsWith('.svg') && !written.has(existing)) {
+      await unlink(join(OUT_DIR, existing))
+      console.log(`  removed stale ${existing}`)
+    }
   }
   // Generic fallback for any image path that has no manifest entry, so the last tier of
   // lib/images.ts always resolves to a file that exists.

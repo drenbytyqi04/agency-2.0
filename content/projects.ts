@@ -98,6 +98,21 @@ export const projects: Project[] = [
   },
 
   {
+    slug: 'az-montana',
+    title: 'AZ Montana',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2024',
+    liveUrl: 'https://az-montana.webflow.io/home',
+    linksToLiveSite: true,
+    image: '/images/projects/az-montana-01.png',
+    gallery: [],
+    featured: true,
+    isPlaceholder: false,
+    intro: '',
+  },
+
+  {
     slug: 'nova-stays',
     title: 'Nova Stays',
     category: 'Websites',
