@@ -58,7 +58,7 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
           {visible.length} projects shown
         </p>
 
-        <div className="grid gap-x-8 gap-y-16 md:grid-cols-2">
+        <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {visible.map((project, index) => (
               <motion.div
@@ -68,13 +68,9 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={reduced ? undefined : { opacity: 0, y: -8 }}
                 transition={{ duration: 0.4, delay: reduced ? 0 : index * 0.04, ease: [0.22, 1, 0.36, 1] }}
-                className={index % 3 === 0 ? 'md:col-span-2' : ''}
               >
-                <ProjectCard
-                  project={project}
-                  size={index % 3 === 0 ? 'lg' : 'md'}
-                  priority={index === 0}
-                />
+                {/* The first row is above the fold on most screens. */}
+                <ProjectCard project={project} priority={index < 3} />
               </motion.div>
             ))}
           </AnimatePresence>

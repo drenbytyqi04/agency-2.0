@@ -35,7 +35,11 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
             src={project.src}
             alt={project.alt}
             fill
-            sizes={size === 'lg' ? '(max-width: 1024px) 100vw, 60vw' : '(max-width: 1024px) 100vw, 40vw'}
+            sizes={
+              size === 'lg'
+                ? '(max-width: 1024px) 100vw, 60vw'
+                : '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
+            }
             priority={priority}
             unoptimized={isPlaceholderSrc(project.src)}
             className="object-cover transition-transform duration-[900ms] ease-editorial will-change-transform group-hover:scale-[1.04]"
