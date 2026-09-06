@@ -4,13 +4,13 @@ import { MaskText } from '@/components/animations/mask-text'
 import { FinalCta } from '@/components/sections/final-cta'
 import { WorkGrid } from '@/components/sections/work-grid'
 import { PhotoCredits } from '@/components/ui/photo-credits'
-import { Eyebrow, PlaceholderNote } from '@/components/ui/section'
+import { Eyebrow } from '@/components/ui/section'
 import { projects } from '@/content/projects'
 import { toProjectView } from '@/lib/project-view'
 import { siteConfig } from '@/lib/site'
 
 const description =
-  'Demonstration projects showing how we work: websites, online stores, branding and booking systems.'
+  'Websites and Webflow templates built by Nexa. Each one links straight to the live site.'
 
 export const metadata: Metadata = {
   title: 'Work',
@@ -31,13 +31,6 @@ export default function WorkPage() {
             className="mt-8 text-display-lg text-ink"
             lines={['Work that makes', 'a difference.']}
           />
-          <div className="mt-10">
-            <PlaceholderNote>
-              {projects.every((project) => project.isPlaceholder)
-                ? 'Demonstration projects — not work delivered for clients'
-                : 'Cards marked “demo” are demonstration content, not delivered work'}
-            </PlaceholderNote>
-          </div>
         </div>
       </header>
 

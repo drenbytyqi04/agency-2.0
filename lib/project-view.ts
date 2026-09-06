@@ -19,8 +19,6 @@ export interface ProjectView {
   isExternal: boolean
   src: string
   alt: string
-  /** Demonstration content rather than delivered work. Marked on the card itself. */
-  isPlaceholder: boolean
 }
 
 export function toProjectView(project: Project): ProjectView {
@@ -32,7 +30,6 @@ export function toProjectView(project: Project): ProjectView {
     description: project.description,
     href: project.linksToLiveSite && project.liveUrl ? project.liveUrl : `/work/${project.slug}`,
     isExternal: Boolean(project.linksToLiveSite && project.liveUrl),
-    isPlaceholder: project.isPlaceholder,
     src: resolveImage(project.image),
     alt: altFor(project.image, project.title),
   }

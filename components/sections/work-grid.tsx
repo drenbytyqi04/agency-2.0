@@ -11,7 +11,6 @@ import type { ProjectView } from '@/lib/project-view'
 /** Client-side filtered portfolio grid. Filtering never touches the network. */
 export function WorkGrid({ projects }: { projects: ProjectView[] }) {
   const [active, setActive] = useState<ProjectCategory | 'All'>('All')
-  const allDemo = projects.every((project) => project.isPlaceholder)
   const reduced = useReducedMotion()
 
   const visible = useMemo(
@@ -21,6 +20,8 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
 
   return (
     <>
+      {/* With a single category there is nothing to filter between, so the row is omitted. */}
+      {projectCategories.length > 2 && (
       <div className="border-y border-line py-5">
         <div className="shell">
           <ul className="flex flex-wrap gap-x-2 gap-y-2" role="list">
@@ -46,6 +47,7 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
           </ul>
         </div>
       </div>
+      )}
 
       <div className="shell py-16 md:py-24">
         {/* Keeps the heading order intact between the page h1 and the h3 on each card. */}
@@ -72,7 +74,6 @@ export function WorkGrid({ projects }: { projects: ProjectView[] }) {
                   project={project}
                   size={index % 3 === 0 ? 'lg' : 'md'}
                   priority={index === 0}
-                  showDemoChip={!allDemo}
                 />
               </motion.div>
             ))}

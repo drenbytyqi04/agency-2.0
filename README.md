@@ -85,7 +85,7 @@ values — prices included.
 
 | File | Contents |
 | --- | --- |
-| `projects.ts` | Portfolio and case studies |
+| `projects.ts` | Portfolio. Entries with `linksToLiveSite` open the live site and generate no case study page |
 | `services.ts` | Service catalogue with deliverables and FAQs |
 | `pricing.ts` | Packages, prices and the orientation note |
 | `testimonials.ts` | Quotes |
@@ -93,16 +93,18 @@ values — prices included.
 | `clients.ts` | Marquee names and process steps |
 | `image-sources.ts` | Photo manifest |
 
-### Demonstration content
+### Placeholder content
 
-The site currently ships with **placeholder portfolio content**. Projects, clients,
-testimonials and team members are fictional, and every metric is illustrative rather than
-measured. Each file marks this in its header and via an `isPlaceholder` flag, and the UI
-labels it visibly wherever it appears. Replace these files with real material before launch —
-and keep the flags accurate, so nothing fictional is ever presented as a real result.
+The portfolio is real delivered work. Three things on the site are still invented and are
+labelled as such in the UI and in their source files:
 
-The team section deliberately uses typographic initials instead of portraits, so no real
-person is depicted as a member of the studio.
+- `clients.ts` — the names in the trust marquee
+- `testimonials.ts` — the quotes
+- `team.ts` — the team members, shown as typographic initials rather than photographs so no
+  real person is depicted as part of the studio
+
+Replace or remove them before launch. Nothing fictional should sit beside real work without
+saying so.
 
 ## Configuration
 

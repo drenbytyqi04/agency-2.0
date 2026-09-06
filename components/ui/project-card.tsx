@@ -9,11 +9,6 @@ interface ProjectCardProps {
   /** Layout weight inside the asymmetric grid. */
   size?: 'lg' | 'md'
   priority?: boolean
-  /**
-   * Whether to badge this card as demonstration content. Sections where every project is a
-   * demo say so once in their own label instead, which reads better than repeating a chip.
-   */
-  showDemoChip?: boolean
 }
 
 /**
@@ -22,12 +17,7 @@ interface ProjectCardProps {
  *
  * The image scales inside a fixed frame on hover; the frame never moves, so nothing reflows.
  */
-export function ProjectCard({
-  project,
-  size = 'md',
-  priority = false,
-  showDemoChip = true,
-}: ProjectCardProps) {
+export function ProjectCard({ project, size = 'md', priority = false }: ProjectCardProps) {
   const aspect = size === 'lg' ? 'aspect-[4/3]' : 'aspect-[3/2]'
 
   // An external destination needs a plain anchor with the usual safety attributes;
@@ -54,11 +44,6 @@ export function ProjectCard({
             aria-hidden="true"
             className="absolute inset-0 bg-base/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
-          {showDemoChip && project.isPlaceholder && (
-            <span className="absolute left-5 top-5 rounded-full border border-line-strong bg-base/70 px-3 py-1 font-sans text-[10px] uppercase tracking-[0.14em] text-muted backdrop-blur-sm">
-              Demo
-            </span>
-          )}
 
           {/* Hover marker, hidden from assistive tech — the link already announces the action. */}
           <span

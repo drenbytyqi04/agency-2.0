@@ -7,7 +7,7 @@ import { MaskText } from '@/components/animations/mask-text'
 import { Reveal } from '@/components/animations/reveal'
 import { ButtonLink } from '@/components/ui/button'
 import { PhotoCredits } from '@/components/ui/photo-credits'
-import { Eyebrow, PlaceholderNote } from '@/components/ui/section'
+import { Eyebrow } from '@/components/ui/section'
 import { caseStudyProjects, getNextProject, getProject } from '@/content/projects'
 import { isPlaceholderSrc } from '@/lib/image-src'
 import { altFor, creditFor, resolveImage } from '@/lib/images'
@@ -101,13 +101,6 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
           )}
 
-          {project.isPlaceholder && (
-            <div className="mt-8">
-              <PlaceholderNote>
-                Demonstration case — a fictional project built to show how we work
-              </PlaceholderNote>
-            </div>
-          )}
         </div>
       </header>
 
@@ -158,9 +151,6 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <div className="shell">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <Eyebrow>In numbers</Eyebrow>
-            {project.isPlaceholder && (
-              <PlaceholderNote>Illustrative figures — not measured client results</PlaceholderNote>
-            )}
           </div>
 
           <dl className="mt-10 grid gap-px bg-line sm:grid-cols-3">
@@ -222,12 +212,25 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
           <div className="flex flex-wrap items-end justify-between gap-8">
             <div>
-              <Eyebrow>Next project</Eyebrow>
-              <Link href={`/work/${next.slug}`} className="group mt-4 block">
-                <h2 className="font-display text-display-sm text-ink transition-colors duration-300 group-hover:text-accent">
-                  {next.title}
-                </h2>
-              </Link>
+              {next ? (
+                <>
+                  <Eyebrow>Next project</Eyebrow>
+                  <Link href={`/work/${next.slug}`} className="group mt-4 block">
+                    <h2 className="font-display text-display-sm text-ink transition-colors duration-300 group-hover:text-accent">
+                      {next.title}
+                    </h2>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Eyebrow>More work</Eyebrow>
+                  <Link href="/work" className="group mt-4 block">
+                    <h2 className="font-display text-display-sm text-ink transition-colors duration-300 group-hover:text-accent">
+                      All projects
+                    </h2>
+                  </Link>
+                </>
+              )}
             </div>
             <ButtonLink href={siteConfig.bookingHref}>{ctas.primary}</ButtonLink>
           </div>
