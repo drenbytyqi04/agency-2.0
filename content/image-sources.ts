@@ -50,6 +50,15 @@ export function withAttribution(url: string): string {
 }
 
 export const imageSources: ImageSource[] = [
+  // --- AZ NAPOLI (our own work) ---
+  {
+    kind: 'own',
+    file: '/images/projects/az-napoli-01.webp',
+    baseUrl:
+      'https://uploads-ssl.webflow.com/64c8badb57edee159dbe8044/64dd0d875bc91ba230d775ae_N-Share.webp',
+    alt: 'The AZ Napoli website',
+  },
+
   // --- AZ UTAH (our own work) ---
   {
     kind: 'own',

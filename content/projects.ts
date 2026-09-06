@@ -50,6 +50,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'az-napoli',
+    title: 'AZ Napoli',
+    category: 'Websites',
+    sector: 'Webflow template',
+    year: '2026',
+    liveUrl: 'https://az-napoli.webflow.io/aboutus',
+    linksToLiveSite: true,
+    image: '/images/projects/az-napoli-01.webp',
+    gallery: [],
+    featured: true,
+    intro: '',
+  },
+
+  {
     slug: 'az-utah',
     title: 'AZ Utah',
     category: 'Websites',
@@ -208,7 +222,7 @@ export const projects: Project[] = [
     title: 'AZ Tirana',
     category: 'Websites',
     sector: 'Webflow template',
-    year: '2026',
+    year: '2025',
     liveUrl: 'https://az-tirana.webflow.io/home',
     linksToLiveSite: true,
     image: '/images/projects/az-tirana-01.webp',
