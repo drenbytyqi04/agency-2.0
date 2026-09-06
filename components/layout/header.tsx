@@ -46,7 +46,11 @@ export function Header() {
           <nav className="hidden lg:block" aria-label="Main navigation">
             <ul className="flex items-center gap-9">
               {navigation.map((item) => {
-                const active = pathname === item.href || pathname.startsWith(`${item.href}/`)
+                // The home route is a prefix of every path, so it only matches exactly.
+                const active =
+                  item.href === '/'
+                    ? pathname === '/'
+                    : pathname === item.href || pathname.startsWith(`${item.href}/`)
                 return (
                   <li key={item.href}>
                     <Link
