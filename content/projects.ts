@@ -51,7 +51,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: 'az-napoli',
-    title: 'AZ Napoli',
+    title: 'Napoli',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -65,7 +65,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-utah',
-    title: 'AZ Utah',
+    title: 'Utah',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -79,7 +79,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-iowa',
-    title: 'AZ Iowa',
+    title: 'Iowa',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-vermont',
-    title: 'AZ Vermont',
+    title: 'Vermont',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -107,7 +107,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-montana',
-    title: 'AZ Montana',
+    title: 'Montana',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -121,7 +121,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-melbourne',
-    title: 'AZ Melbourne',
+    title: 'Melbourne',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -135,7 +135,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-bali',
-    title: 'AZ Bali',
+    title: 'Bali',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -149,7 +149,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-new-zealand',
-    title: 'AZ New Zealand',
+    title: 'New Zealand',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -163,7 +163,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-palermo',
-    title: 'AZ Palermo',
+    title: 'Palermo',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -177,7 +177,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-hawaii',
-    title: 'AZ Hawaii',
+    title: 'Hawaii',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -191,7 +191,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-washington',
-    title: 'AZ Washington',
+    title: 'Washington',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -205,7 +205,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-panama',
-    title: 'AZ Panama',
+    title: 'Panama',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2026',
@@ -219,7 +219,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-tirana',
-    title: 'AZ Tirana',
+    title: 'Tirana',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2025',
@@ -233,7 +233,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-doha',
-    title: 'AZ Doha',
+    title: 'Doha',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2025',
@@ -247,7 +247,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-galway',
-    title: 'AZ Galway',
+    title: 'Galway',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2025',
@@ -261,7 +261,7 @@ export const projects: Project[] = [
 
   {
     slug: 'az-belfast',
-    title: 'AZ Belfast',
+    title: 'Belfast',
     category: 'Websites',
     sector: 'Webflow template',
     year: '2025',
