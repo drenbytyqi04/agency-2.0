@@ -20,12 +20,12 @@ export function Footer() {
         <div className="mt-14 grid gap-10 border-t border-line pt-10 sm:grid-cols-2 lg:grid-cols-4">
           <nav aria-label="Footer navigation">
             <h2 className="eyebrow mb-5">Pages</h2>
-            <ul className="space-y-3">
+            <ul className="space-y-1">
               {navigation.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="link-underline font-sans text-sm text-ink transition-colors hover:text-accent"
+                    className="link-underline inline-flex min-h-[44px] items-center font-sans text-sm text-ink transition-colors hover:text-accent"
                   >
                     {item.label}
                   </Link>
@@ -36,11 +36,11 @@ export function Footer() {
 
           <div>
             <h2 className="eyebrow mb-5">Contact</h2>
-            <ul className="space-y-3 font-sans text-sm">
+            <ul className="space-y-1 font-sans text-sm">
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="link-underline text-ink transition-colors hover:text-accent"
+                  className="link-underline inline-flex min-h-[44px] items-center text-ink transition-colors hover:text-accent"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -48,7 +48,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${siteConfig.contact.phoneHref}`}
-                  className="link-underline text-ink transition-colors hover:text-accent"
+                  className="link-underline inline-flex min-h-[44px] items-center text-ink transition-colors hover:text-accent"
                 >
                   {siteConfig.contact.phone}
                 </a>
@@ -58,13 +58,13 @@ export function Footer() {
 
           <div>
             <h2 className="eyebrow mb-5">Social</h2>
-            <ul className="space-y-3 font-sans text-sm">
+            <ul className="space-y-1 font-sans text-sm">
               <li>
                 <a
                   href={siteConfig.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-underline text-ink transition-colors hover:text-accent"
+                  className="link-underline inline-flex min-h-[44px] items-center text-ink transition-colors hover:text-accent"
                 >
                   Instagram
                 </a>
@@ -74,7 +74,7 @@ export function Footer() {
                   href={siteConfig.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-underline text-ink transition-colors hover:text-accent"
+                  className="link-underline inline-flex min-h-[44px] items-center text-ink transition-colors hover:text-accent"
                 >
                   LinkedIn
                 </a>
@@ -84,12 +84,12 @@ export function Footer() {
 
           <div>
             <h2 className="eyebrow mb-5">Location</h2>
-            <p className="font-sans text-sm text-ink">{siteConfig.contact.city}</p>
+            <p className="py-2 font-sans text-sm text-ink">{siteConfig.contact.city}</p>
             <p className="mt-2 font-sans text-sm text-muted">We work remotely too.</p>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-8 font-sans text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-8 font-sans text-[13px] text-muted sm:flex-row sm:items-center sm:justify-between sm:text-xs">
           <p>© {year} Nexa. All rights reserved.</p>
           <p>{siteConfig.supporting}</p>
         </div>

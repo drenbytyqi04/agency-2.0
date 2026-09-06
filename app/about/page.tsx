@@ -83,7 +83,7 @@ export default function AboutPage() {
                   <h3 className="mt-8 font-display text-2xl leading-none text-ink">
                     {member.name}
                   </h3>
-                  <p className="mt-2 font-sans text-xs uppercase tracking-[0.16em] text-accent">
+                  <p className="mt-2 font-sans text-[13px] uppercase tracking-[0.16em] text-accent md:text-xs">
                     {member.role}
                   </p>
                   <p className="mt-5 font-sans text-sm text-muted">{member.focus}</p>

@@ -37,7 +37,7 @@ export default function ContactPage() {
                 <dd className="mt-2">
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
-                    className="link-underline font-sans text-lg text-ink transition-colors hover:text-accent"
+                    className="link-underline inline-flex min-h-[44px] items-center font-sans text-lg text-ink transition-colors hover:text-accent"
                   >
                     {siteConfig.contact.email}
                   </a>
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 <dd className="mt-2">
                   <a
                     href={`tel:${siteConfig.contact.phoneHref}`}
-                    className="link-underline font-sans text-lg text-ink [font-variant-numeric:tabular-nums] transition-colors hover:text-accent"
+                    className="link-underline inline-flex min-h-[44px] items-center font-sans text-lg text-ink [font-variant-numeric:tabular-nums] transition-colors hover:text-accent"
                   >
                     {siteConfig.contact.phone}
                   </a>

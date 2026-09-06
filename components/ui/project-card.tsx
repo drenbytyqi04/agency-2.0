@@ -63,7 +63,7 @@ export function ProjectCard({ project, size = 'md', priority = false }: ProjectC
             {project.title}
             {project.isExternal && <span className="sr-only"> (opens the live site in a new tab)</span>}
           </h3>
-          <span className="shrink-0 font-sans text-[11px] uppercase tracking-[0.18em] text-muted">
+          <span className="shrink-0 font-sans text-[12px] uppercase tracking-[0.18em] text-muted md:text-[11px]">
             {project.category} · {project.year}
           </span>
         </div>

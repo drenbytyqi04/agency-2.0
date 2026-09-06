@@ -76,14 +76,16 @@
     @apply border-t border-line;
   }
 
-  /* Eyebrow label: small, tracked-out, muted, preceded by an accent dot. */
+  /* Eyebrow label: small, tracked-out, muted, preceded by an accent dot.
+     The dot is spaced with a margin rather than flex `gap`, because callers legitimately
+     set `block` on the label and that would drop the gap, leaving the dot against the text. */
   .eyebrow {
-    @apply flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] text-muted;
+    @apply font-sans text-[12px] uppercase tracking-[0.18em] text-muted md:text-[11px];
   }
 
   .eyebrow::before {
     content: '';
-    @apply inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent;
+    @apply mr-2 inline-block h-1.5 w-1.5 shrink-0 translate-y-[-1px] rounded-full bg-accent align-middle;
   }
 
   /* Soft ambient wash: a wide, low-opacity colour bloom behind key sections. */

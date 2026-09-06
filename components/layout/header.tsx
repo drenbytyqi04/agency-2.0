@@ -37,7 +37,7 @@ export function Header() {
         >
           <Link
             href="/"
-            className="font-display text-2xl font-semibold uppercase leading-none tracking-[0.06em] text-ink transition-colors hover:text-accent"
+            className="-m-2 inline-flex min-h-[44px] items-center p-2 font-display text-2xl font-semibold uppercase leading-none tracking-[0.06em] text-ink transition-colors hover:text-accent"
             aria-label="Nexa — home"
           >
             Nexa

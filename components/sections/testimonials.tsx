@@ -23,7 +23,7 @@ export function Testimonials() {
                   <span aria-hidden="true" className="mb-6 block h-px w-10 bg-accent" />
                   {testimonial.quote}
                 </blockquote>
-                <figcaption className="mt-10 font-sans text-xs uppercase tracking-[0.16em] text-muted">
+                <figcaption className="mt-10 font-sans text-[13px] uppercase tracking-[0.16em] text-muted md:text-xs">
                   {testimonial.author}
                   <span aria-hidden="true" className="mx-2 text-line-strong">
                     /

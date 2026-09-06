@@ -42,7 +42,7 @@ export function Commitments() {
                       <span className="font-display text-4xl font-semibold text-ink [font-variant-numeric:tabular-nums]">
                         {item.value}
                       </span>
-                      <span className="font-sans text-xs text-muted">{item.unit}</span>
+                      <span className="font-sans text-[13px] text-muted md:text-xs">{item.unit}</span>
                     </p>
                     <p className="mt-3 font-sans text-sm text-muted">{item.label}</p>
                   </div>

@@ -13,7 +13,7 @@ const base =
 
 const sizes: Record<Size, string> = {
   md: 'min-h-[52px] py-3 pl-7 pr-3 text-[13px]',
-  sm: 'min-h-[44px] py-2 pl-5 pr-2 text-[12px]',
+  sm: 'min-h-[44px] py-2 pl-5 pr-2 text-[13px] md:text-[12px]',
 }
 
 const variants: Record<Variant, string> = {

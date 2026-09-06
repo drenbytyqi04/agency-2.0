@@ -247,11 +247,11 @@ export function ContactForm() {
         {/* One fixed-height slot: swapping hint for error must not move the submit button. */}
         <div className="mt-2 min-h-[1.5rem]">
           {errors.message ? (
-            <p id="message-error" className="font-sans text-xs text-danger">
+            <p id="message-error" className="font-sans text-[13px] text-danger md:text-xs">
               {errors.message}
             </p>
           ) : (
-            <p id="message-hint" className="font-sans text-xs text-muted">
+            <p id="message-hint" className="font-sans text-[13px] text-muted md:text-xs">
               The more specific you are, the more useful our reply.
             </p>
           )}
@@ -262,7 +262,7 @@ export function ContactForm() {
         <Button type="submit" disabled={status === 'loading'} className="disabled:opacity-60">
           {status === 'loading' ? 'Sending…' : 'Send request'}
         </Button>
-        <p className="font-sans text-xs text-muted">We reply within 24 hours on working days.</p>
+        <p className="font-sans text-[13px] text-muted md:text-xs">We reply within 24 hours on working days.</p>
       </div>
     </form>
   )
@@ -326,7 +326,7 @@ function Field({
       {/* Reserved height so showing or clearing an error never shifts the layout below. */}
       <div className="mt-2 min-h-[1.25rem]">
         {error && (
-          <p id={`${id}-error`} className="font-sans text-xs text-danger">
+          <p id={`${id}-error`} className="font-sans text-[13px] text-danger md:text-xs">
             {error}
           </p>
         )}

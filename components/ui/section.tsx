@@ -29,7 +29,7 @@ export function Section({
 /** Small caption used to mark demonstration content honestly wherever it appears. */
 export function PlaceholderNote({ children }: { children: ReactNode }) {
   return (
-    <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-muted/70">
+    <p className="font-sans text-[12px] uppercase tracking-[0.18em] text-muted/70 md:text-[11px]">
       <span aria-hidden="true" className="mr-2 inline-block h-1.5 w-1.5 bg-muted/50 align-middle" />
       {children}
     </p>
